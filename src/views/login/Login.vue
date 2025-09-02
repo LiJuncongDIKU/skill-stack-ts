@@ -4,7 +4,7 @@
       <img class="logo" :src="svgUrl" alt="" />
     </div>
     <div class="login-right">
-      <LoginForm class="form" />
+      <LoginForm class="form" @login="goBench" />
     </div>
   </div>
 </template>
@@ -12,6 +12,11 @@
 <script setup lang="ts">
 import svgUrl from '../../assets/svg/login_light.svg?url';
 import LoginForm from './LoginForm.vue';
+import { router } from '../../router/index'
+
+const goBench = () => {
+  router.push('/workbench')
+}
 </script>
 
 <style lang="scss" scoped>
@@ -33,17 +38,19 @@ import LoginForm from './LoginForm.vue';
     background-position: -5px -5px;
 
     .logo {
-      width: 600px;
+      width: 580px;
     }
   }
 
   .login-right {
-    background: vars.$color-vue-light;
     display: flex;
     align-items: center;
-    .form{
+    background: repeating-linear-gradient(45deg, #92c9b1, #92c9b1 20px, #b3e0d2 20px, #b3e0d2 40px);
+
+    .form {
       width: 300px;
       margin: auto;
+      background: vars.$color-vue-light;
     }
   }
 }
