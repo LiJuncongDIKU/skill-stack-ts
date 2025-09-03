@@ -27,15 +27,15 @@ const goBench = () => {
   height: 100vh;
   display: grid;
   grid-template-columns: 2fr 1fr;
+  background: vars.$color-vue-deep;
+  background-image: radial-gradient(white 2px, transparent 0);
+  background-size: 30px 30px;
+  background-position: -5px -5px;
 
   .login-left {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: vars.$color-vue-deep;
-    background-image: radial-gradient(white 2px, transparent 0);
-    background-size: 30px 30px;
-    background-position: -5px -5px;
 
     .logo {
       width: 580px;
@@ -45,7 +45,7 @@ const goBench = () => {
   .login-right {
     display: flex;
     align-items: center;
-    background: repeating-linear-gradient(45deg, #92c9b1, #92c9b1 20px, #b3e0d2 20px, #b3e0d2 40px);
+    // background: repeating-linear-gradient(45deg, #92c9b1, #92c9b1 20px, #b3e0d2 20px, #b3e0d2 40px);
 
     .form {
       width: 300px;
