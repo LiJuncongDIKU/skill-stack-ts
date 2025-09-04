@@ -4,9 +4,7 @@
       <div class="title">我的章节</div>
       <Menu></Menu>
     </div>
-    <div class="content">
-      <router-view></router-view>
-    </div>
+    <router-view class="content"></router-view>
   </div>
 </template>
 
@@ -30,6 +28,7 @@ import Menu from './Menu.vue'
     width: 200px;
     background: vars.$color-vue-deep;
     border-right: 1px solid vars.$color-vue-light;
+
     .title {
       color: #fff;
       font-size: 20px;
