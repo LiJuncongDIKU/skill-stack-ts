@@ -13,11 +13,11 @@ import { router } from '../../router/index';
 
 const list = ref([
   {
-    title: '技术概况',
+    title: '技术栈',
     path: '/workbench/overview'
   },
   {
-    title: '关于项目',
+    title: '关于工程化',
     path: '/workbench/about'
   }
 ]);
