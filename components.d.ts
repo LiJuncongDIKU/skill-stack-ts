@@ -12,6 +12,7 @@ declare module 'vue' {
     ElStep: typeof import('element-plus/es')['ElStep']
     ElSteps: typeof import('element-plus/es')['ElSteps']
     HelloWorld: typeof import('./src/components/HelloWorld.vue')['default']
+    HighLightCoder: typeof import('./src/components/HighLightCoder.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
   }

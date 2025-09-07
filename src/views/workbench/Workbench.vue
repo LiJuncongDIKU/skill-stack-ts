@@ -23,6 +23,7 @@ import Menu from './Menu.vue'
   background-color: #fff;
   display: grid;
   grid-template-columns: auto 1fr;
+  overflow: hidden;
 
   .chapter {
     width: 200px;
