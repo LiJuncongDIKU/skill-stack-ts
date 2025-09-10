@@ -42,6 +42,7 @@ const tabClick = (index: number) => {
   max-height: 100%;
   border: 2px solid vars.$color-vue-deep;
   border-radius: 6px;
+  box-sizing: border-box;
 
   .file-tags {
     flex: 0 0 auto;
@@ -54,6 +55,8 @@ const tabClick = (index: number) => {
       padding: 8px 12px;
       color: #aaa;
       cursor: pointer;
+      border: 1px solid #000;
+      border-width: 0 1px;
 
       &.active {
         background: vars.$color-vue-light;

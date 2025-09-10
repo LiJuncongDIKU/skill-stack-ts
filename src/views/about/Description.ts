@@ -1,7 +1,12 @@
 import viteIcon from '@/assets/icon/vite.svg?url';
+import fileIcon from '@/assets/icon/file.svg?url';
+import nodejsIcon from '@/assets/icon/nodejs.svg?url';
 import removeLog4Webpack from '@/code4show/vite/RemoveConsolePlugin.js?raw';
 import removeLog4Vite from '@/code4show/vite/vite-plugin-remove-console.js?raw';
 import viteQuickImport from '@/code4show/vite/quickImport.js?raw';
+import indexHtml from '@/code4show/framework/index.html?raw';
+import appMain from '@/code4show/framework/main.ts?raw';
+import viteConfig from '@/code4show/framework/vite.config.ts?raw';
 
 export type codeFile = {
   name: string;
@@ -38,6 +43,35 @@ export const descriptionsList: desc[] = [
           { name: '静态资源加载', content: viteQuickImport },
         ]
       }
+    ]
+  },
+  {
+    title: 'SFC (Single File Component) 单文件组件',
+    desc: '在构建工具的支持下，可以将组件的模板、脚本和样式封装在一个文件中。这使得开发和管理代码更加高效。原始的构建工具结构应该只需要一个index.html文件和一个入口js文件。这可以说是任何前端工程基础中的基础。',
+    icon: fileIcon,
+    tags: [
+      {
+        name: '从零开始理解',
+        code: [
+          { content: indexHtml, name: 'index.html' },
+          { content: appMain, name: 'main.ts' },
+          { content: viteConfig, name: 'vite.config.ts' }
+        ],
+      },
+    ]
+  }, {
+    title: '包管理工具和运行',
+    desc: '在构建工具的支持下，可以将组件的模板、脚本和样式封装在一个文件中。这使得开发和管理代码更加高效。原始的构建工具结构应该只需要一个index.html文件和一个入口js文件。这可以说是任何前端工程基础中的基础。',
+    icon: nodejsIcon,
+    tags: [
+      {
+        name: '从零开始理解',
+        code: [
+          { content: indexHtml, name: 'index.html' },
+          { content: appMain, name: 'main.ts' },
+          { content: viteConfig, name: 'vite.config.ts' }
+        ],
+      },
     ]
   }
 ]
