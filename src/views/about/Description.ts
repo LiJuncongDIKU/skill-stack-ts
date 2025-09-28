@@ -9,6 +9,8 @@ import viteQuickImport from '@/code4show/vite/quickImport.js?raw';
 import indexHtml from '@/code4show/framework/index.html?raw';
 import appMain from '@/code4show/framework/main.ts?raw';
 import viteConfig from '@/code4show/framework/vite.config.ts?raw';
+import requestTxt from "../../apis/request.ts?raw"
+import clientTxt from "../../apis/client.api.ts?raw"
 
 export type codeFile = {
   name: string;
@@ -82,9 +84,10 @@ export const descriptionsList: desc[] = [
     icon: serverIcon,
     tags: [
       {
-        name:'独立的Axios实例',
+        name: '独立的Axios实例',
         code: [
-          {}
+          { content: requestTxt, name: 'request.ts' },
+          { content: clientTxt, name: '按模块定义api文件' },
         ]
       }
     ]
