@@ -19,6 +19,10 @@ const list = ref([
   {
     title: '关于工程化',
     path: '/workbench/about'
+  },
+  {
+    title: '经典CRUD风格',
+    path: '/workbench/crud'
   }
 ]);
 

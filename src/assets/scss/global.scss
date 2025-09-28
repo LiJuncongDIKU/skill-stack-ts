@@ -5,3 +5,8 @@ body,* {
   margin: 0;
   padding: 0;
 }
+
+.typical-box{
+  background-color: $deep-vue;
+  border: 1px solid $light-vue;
+}
