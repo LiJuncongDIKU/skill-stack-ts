@@ -11,6 +11,7 @@ import appMain from '@/code4show/framework/main.ts?raw';
 import viteConfig from '@/code4show/framework/vite.config.ts?raw';
 import requestTxt from "../../apis/request.ts?raw"
 import clientTxt from "../../apis/client.api.ts?raw"
+import clientClassTxt from "../../views/client/Client.ts?raw";
 
 export type codeFile = {
   name: string;
@@ -64,6 +65,21 @@ export const descriptionsList: desc[] = [
     ]
   },
   {
+    title: "api二封",
+    desc: "基于axios的基础上，对自身业务的部分定制化操作进行二封，可以非常高效地处理接口调用这是工程化的重要一步。首先，创建独立的axios实例，这在后台分服务管理api时非常有用；第二步，封装自定义返回方法，主要是为同一个业务模块的apis作前端的分组；第三步，定义接口和调用。",
+    icon: serverIcon,
+    tags: [
+      {
+        name: '我的二封方案',
+        code: [
+          { content: requestTxt, name: 'request.ts' },
+          { content: clientTxt, name: '按模块定义api文件' },
+          { content: clientClassTxt, name: 'model层使用' },
+        ]
+      }
+    ]
+  },
+  {
     title: 'Vue3',
     desc: '相较于React，个人更喜欢SFC (Single File Component) 单文件组件的风格。在常见的业务系统中，双向绑定对于表单的处理非常方便。自定义组件方面，defineModel的开放更是升级了体验',
     icon: vueIcon,
@@ -78,18 +94,4 @@ export const descriptionsList: desc[] = [
       // },
     ]
   },
-  {
-    title: "api二封",
-    desc: "基于axios的基础上，对自身业务的部分定制化操作进行二封，可以非常高效地处理接口调用这是工程化的重要一步。首先，创建独立的axios实例，这在后台分服务管理api时非常有用；第二步，封装自定义返回方法，主要是为同一个业务模块的apis作前端的分组；第三步，定义接口和调用。",
-    icon: serverIcon,
-    tags: [
-      {
-        name: '独立的Axios实例',
-        code: [
-          { content: requestTxt, name: 'request.ts' },
-          { content: clientTxt, name: '按模块定义api文件' },
-        ]
-      }
-    ]
-  }
 ]

@@ -1,6 +1,7 @@
 <template>
   <div class="curd-wrap">
     <router-link to="/workbench/crud/table">表格查询</router-link>
+    <router-link to="/workbench/crud/form">表单编辑</router-link>
     <router-view class="sub-view"></router-view>
   </div>
 </template>

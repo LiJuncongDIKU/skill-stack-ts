@@ -9,6 +9,12 @@ export {}
 declare module 'vue' {
   export interface GlobalComponents {
     BenchGrid: typeof import('./src/components/BenchGrid.vue')['default']
+    ElButton: typeof import('element-plus/es')['ElButton']
+    ElForm: typeof import('element-plus/es')['ElForm']
+    ElFormItem: typeof import('element-plus/es')['ElFormItem']
+    ElInput: typeof import('element-plus/es')['ElInput']
+    ElOption: typeof import('element-plus/es')['ElOption']
+    ElSelect: typeof import('element-plus/es')['ElSelect']
     ElStep: typeof import('element-plus/es')['ElStep']
     ElSteps: typeof import('element-plus/es')['ElSteps']
     HelloWorld: typeof import('./src/components/HelloWorld.vue')['default']
