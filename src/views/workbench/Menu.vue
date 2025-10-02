@@ -1,21 +1,21 @@
 <template>
   <div>
     <div v-for="item in list" :key="item.title" @click="handleRoute(item)"
-      :class="{ 'link-item': true, 'active': item.path === activePath }">
+      :class="{ 'link-item': true, 'active': new RegExp(item.path).test(activePath)  }">
       {{ item.title }}
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
-import { computed, ref } from 'vue';
+import { computed, reactive } from 'vue';
 import { router } from '../../router/index';
 
-const list = ref([
-  {
-    title: '技术栈',
-    path: '/workbench/overview'
-  },
+const list = reactive([
+  // {
+  //   title: '技术栈',
+  //   path: '/workbench/overview'
+  // },
   {
     title: '关于工程化',
     path: '/workbench/about'

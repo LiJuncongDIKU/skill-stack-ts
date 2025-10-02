@@ -12,6 +12,9 @@ import viteConfig from '@/code4show/framework/vite.config.ts?raw';
 import requestTxt from "../../apis/request.ts?raw"
 import clientTxt from "../../apis/client.api.ts?raw"
 import clientClassTxt from "../../views/client/Client.ts?raw";
+import pnpmTxt from '@/code4show/framework/pnpm.md?raw';
+import npmTxt from '@/code4show/framework/npm.md?raw';
+import yarnTxt from '@/code4show/framework/yarn.md?raw';
 
 export type codeFile = {
   name: string;
@@ -20,7 +23,8 @@ export type codeFile = {
 }
 export type codeTag = {
   name: string;
-  code: codeFile[]
+  code: codeFile[],
+  isLink?: string,
 }
 export type desc = {
   title: string;
@@ -62,6 +66,14 @@ export const descriptionsList: desc[] = [
           { content: viteConfig, name: 'vite.config.ts' }
         ],
       },
+      {
+        name: '包管理工具对比',
+        code: [
+          { name: 'yarn.md', content: yarnTxt, lang: 'md' },
+          { name: 'pnpm.md', content: pnpmTxt, lang: 'md' },
+          { name: 'npm.md', content: npmTxt, lang: 'md' },
+        ],
+      }
     ]
   },
   {
@@ -81,17 +93,15 @@ export const descriptionsList: desc[] = [
   },
   {
     title: 'Vue3',
-    desc: '相较于React，个人更喜欢SFC (Single File Component) 单文件组件的风格。在常见的业务系统中，双向绑定对于表单的处理非常方便。自定义组件方面，defineModel的开放更是升级了体验',
+    desc: '工程化到这一步，需要选择一个框架，引入对应生态。相较于React，个人更喜欢SFC (Single File Component) 单文件组件的风格。在常见的业务系统中，双向绑定对于表单的处理非常方便。自定义组件方面，defineModel的开放更是升级了体验。例子请查看下一章 经典CRUD风格',
     icon: vueIcon,
     tags: [
-      // {
-      //   name: '从零开始理解',
-      //   code: [
-      //     { content: indexHtml, name: 'index.html' },
-      //     { content: appMain, name: 'main.ts' },
-      //     { content: viteConfig, name: 'vite.config.ts' }
-      //   ],
-      // },
+      {
+        name: '经典CRUD风格',
+        isLink: '/workbench/crud/form',
+        code: [
+        ],
+      },
     ]
   },
 ]

@@ -7,13 +7,15 @@
       </div>
     </div>
     <div class="limit-scroll">
-      <HighLightCoder :code="fileList[activeIndex]?.content || ''"></HighLightCoder>
+      <HighLightCoder :code="fileList[activeIndex]?.content || ''" v-show="!isMd"></HighLightCoder>
+      <div class="md-content" v-show="isMd" v-html="markedMd"></div>
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
-import { ref, watch, type Ref } from 'vue';
+import { computed, ref, watch, type Ref } from 'vue';
+import { marked } from 'marked';
 import { type codeFile } from './Description';
 import HighLightCoder from '../..//components/HighLightCoder.vue';
 
@@ -30,6 +32,19 @@ watch(
 const tabClick = (index: number) => {
   activeIndex.value = index;
 };
+
+// 如果传入的lang是md，则不使用代码viewer,使用md模式
+const isMd = computed(() => {
+  const cFile: codeFile = props.fileList[activeIndex.value]
+  return cFile?.lang === 'md'
+})
+const markedMd = computed(() => {
+  if (!isMd.value) {
+    return '';
+  }
+  const cFile: codeFile = props.fileList[activeIndex.value]
+  return marked.parse(cFile.content);
+})
 </script>
 
 <style scoped lang="scss">
@@ -40,7 +55,7 @@ const tabClick = (index: number) => {
   flex-direction: column;
   overflow: hidden;
   max-height: 100%;
-  border: 2px solid vars.$color-vue-deep;
+  border: 2px solid vars.$color-vue-light;
   border-radius: 6px;
   box-sizing: border-box;
 
@@ -56,7 +71,7 @@ const tabClick = (index: number) => {
       color: #aaa;
       cursor: pointer;
       border: 1px solid #000;
-      border-width: 0 1px;
+      border-width: 0 1px 0 0;
 
       &.active {
         background: vars.$color-vue-light;
@@ -68,6 +83,44 @@ const tabClick = (index: number) => {
   .limit-scroll {
     flex: 1 1 auto;
     overflow: auto;
+  }
+}
+
+:deep(.md-content) {
+  background-color: #333;
+  color: white;
+  padding: 12px;
+
+  ul {
+    padding: 12px;
+    padding-left: 2em;
+
+    li {
+      list-style-type: circle;
+    }
+
+    li>li {
+      list-style-type: square;
+    }
+
+  }
+
+  code {
+    background: #666;
+    padding: .3em .5em;
+    border-radius: .3em;
+  }
+
+  blockquote {
+    padding: 0.5em;
+    background: #000;
+    margin: 0.5em;
+    border-left: 3px solid darkorange;
+    border-radius: 0 6px 6px 0;
+  }
+
+  em {
+    color: #ccc;
   }
 }
 </style>

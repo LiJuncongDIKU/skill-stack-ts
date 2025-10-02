@@ -20,6 +20,9 @@ importers:
       highlight.js:
         specifier: ^11.11.1
         version: 11.11.1
+      marked:
+        specifier: ^16.3.0
+        version: 16.3.0
       vue:
         specifier: ^3.5.18
         version: 3.5.20(typescript@5.8.3)
@@ -27,9 +30,12 @@ importers:
         specifier: ^4.5.1
         version: 4.5.1(vue@3.5.20(typescript@5.8.3))
     devDependencies:
+      '@types/node':
+        specifier: ^24.6.2
+        version: 24.6.2
       '@vitejs/plugin-vue':
         specifier: ^6.0.1
-        version: 6.0.1(vite@7.1.4(sass-embedded@1.91.0)(sass@1.91.0))(vue@3.5.20(typescript@5.8.3))
+        version: 6.0.1(vite@7.1.4(@types/node@24.6.2)(sass-embedded@1.91.0)(sass@1.91.0))(vue@3.5.20(typescript@5.8.3))
       '@vue/tsconfig':
         specifier: ^0.7.0
         version: 0.7.0(typescript@5.8.3)(vue@3.5.20(typescript@5.8.3))
@@ -47,7 +53,7 @@ importers:
         version: 29.0.0(@babel/parser@7.28.3)(vue@3.5.20(typescript@5.8.3))
       vite:
         specifier: ^7.1.2
-        version: 7.1.4(sass-embedded@1.91.0)(sass@1.91.0)
+        version: 7.1.4(@types/node@24.6.2)(sass-embedded@1.91.0)(sass@1.91.0)
       vue-tsc:
         specifier: ^3.0.5
         version: 3.0.6(typescript@5.8.3)
@@ -472,6 +478,9 @@ packages:
   '@types/lodash@4.17.20':
     resolution: {integrity: sha512-H3MHACvFUEiujabxhaI/ImO6gUrd8oOurg7LQtS7mbwIXA/cUqWrvBsaeJ23aZEPk1TAYkurjfMbSELfoCXlGA==}
 
+  '@types/node@24.6.2':
+    resolution: {integrity: sha512-d2L25Y4j+W3ZlNAeMKcy7yDsK425ibcAOO2t7aPTz6gNMH0z2GThtwENCDc0d/Pw9wgyRqE5Px1wkV7naz8ang==}
+
   '@types/web-bluetooth@0.0.16':
     resolution: {integrity: sha512-oh8q2Zc32S6gd/j50GowEjKLoOVOwHP/bWVjKJInBwQqdOYMdPrf1oVlelTlyfFK3CKxL1uahMDAr+vy8T7yMQ==}
 
@@ -804,6 +813,11 @@ packages:
   magic-string@0.30.18:
     resolution: {integrity: sha512-yi8swmWbO17qHhwIBNeeZxTceJMeBvWJaId6dyvTSOwTipqeHhMhOrz6513r1sOKnpvQ7zkhlG8tPrpilwTxHQ==}
 
+  marked@16.3.0:
+    resolution: {integrity: sha512-K3UxuKu6l6bmA5FUwYho8CfJBlsUWAooKtdGgMcERSpF7gcBUrCGsLH7wDaaNOzwq18JzSUDyoEb/YsrqMac3w==}
+    engines: {node: '>= 20'}
+    hasBin: true
+
   math-intrinsics@1.1.0:
     resolution: {integrity: sha512-/IXtbwEk5HTPyEwyKX6hGkYXxM9nbj64B+ilVJnC/R6B0pH5G4V3b0pVbL7DBj4tkhBAppbQUlf6F6Xl9LHu1g==}
     engines: {node: '>= 0.4'}
@@ -1050,6 +1064,9 @@ packages:
 
   ufo@1.6.1:
     resolution: {integrity: sha512-9a4/uxlTWJ4+a5i0ooc1rU7C7YOw3wT+UGqdeNNHWnOF9qcMBgLRS+4IYUqbczewFx4mLEig6gawh7X6mFlEkA==}
+
+  undici-types@7.13.0:
+    resolution: {integrity: sha512-Ov2Rr9Sx+fRgagJ5AX0qvItZG/JKKoBRAVITs1zk7IqZGTJUwgUr7qoYBpWwakpWilTZFM98rG/AFRocu10iIQ==}
 
   unimport@5.2.0:
     resolution: {integrity: sha512-bTuAMMOOqIAyjV4i4UH7P07pO+EsVxmhOzQ2YJ290J6mkLUdozNhb5I/YoOEheeNADC03ent3Qj07X0fWfUpmw==}
@@ -1443,12 +1460,16 @@ snapshots:
 
   '@types/lodash@4.17.20': {}
 
+  '@types/node@24.6.2':
+    dependencies:
+      undici-types: 7.13.0
+
   '@types/web-bluetooth@0.0.16': {}
 
-  '@vitejs/plugin-vue@6.0.1(vite@7.1.4(sass-embedded@1.91.0)(sass@1.91.0))(vue@3.5.20(typescript@5.8.3))':
+  '@vitejs/plugin-vue@6.0.1(vite@7.1.4(@types/node@24.6.2)(sass-embedded@1.91.0)(sass@1.91.0))(vue@3.5.20(typescript@5.8.3))':
     dependencies:
       '@rolldown/pluginutils': 1.0.0-beta.29
-      vite: 7.1.4(sass-embedded@1.91.0)(sass@1.91.0)
+      vite: 7.1.4(@types/node@24.6.2)(sass-embedded@1.91.0)(sass@1.91.0)
       vue: 3.5.20(typescript@5.8.3)
 
   '@volar/language-core@2.4.23':
@@ -1821,6 +1842,8 @@ snapshots:
     dependencies:
       '@jridgewell/sourcemap-codec': 1.5.5
 
+  marked@16.3.0: {}
+
   math-intrinsics@1.1.0: {}
 
   memoize-one@6.0.0: {}
@@ -2057,6 +2080,8 @@ snapshots:
 
   ufo@1.6.1: {}
 
+  undici-types@7.13.0: {}
+
   unimport@5.2.0:
     dependencies:
       acorn: 8.15.0
@@ -2120,7 +2145,7 @@ snapshots:
 
   varint@6.0.0: {}
 
-  vite@7.1.4(sass-embedded@1.91.0)(sass@1.91.0):
+  vite@7.1.4(@types/node@24.6.2)(sass-embedded@1.91.0)(sass@1.91.0):
     dependencies:
       esbuild: 0.25.9
       fdir: 6.5.0(picomatch@4.0.3)
@@ -2129,6 +2154,7 @@ snapshots:
       rollup: 4.50.0
       tinyglobby: 0.2.14
     optionalDependencies:
+      '@types/node': 24.6.2
       fsevents: 2.3.3
       sass: 1.91.0
       sass-embedded: 1.91.0

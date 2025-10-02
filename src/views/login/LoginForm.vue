@@ -23,7 +23,7 @@
         </svg>
       </div>
     </div>
-    <button class="button-confirm" @click="login">直接看看</button>
+    <button type="button" class="button-confirm" @click="login">直接看看</button>
   </form>
 </template>
 <script lang="ts" setup>

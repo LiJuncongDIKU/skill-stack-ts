@@ -10,14 +10,18 @@
     <div class="tags-wrap">
       <div v-for="tag in props.descItem.tags" :key="tag.name"
         :class="{ 'tag-item': true, active: tag.name === props.activeTag?.name }" @click="handleTagClick(tag)">
-        <div class="tag-title">{{ tag.name }}</div>
+        <div class="tag-title">
+          <img class="pre-icon" :src="linkIcon" v-if="tag.isLink" v-once>
+          {{ tag.name }}
+        </div>
       </div>
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
-import { type desc, type codeTag } from './Description'
+import { type desc, type codeTag } from './Description';
+import linkIcon from '../../assets/icon/link.svg?url';
 
 const props = defineProps<{
   descItem: desc,
@@ -86,5 +90,13 @@ function handleTagClick(tag: codeTag) {
       }
     }
   }
+}
+
+.pre-icon {
+  line-height: 1.5;
+  width: 1.5em;
+  display: inline-block;
+  vertical-align: bottom;
+  margin: 0 .4em 0 0;
 }
 </style>
