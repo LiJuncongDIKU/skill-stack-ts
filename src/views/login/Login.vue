@@ -15,7 +15,7 @@ import LoginForm from './LoginForm.vue';
 import { router } from '../../router/index'
 
 const goBench = () => {
-  router.push('/workbench')
+  router.push('/workbench/about')
 }
 </script>
 

@@ -1,7 +1,7 @@
 <template>
   <div>
     <div v-for="item in list" :key="item.title" @click="handleRoute(item)"
-      :class="{ 'link-item': true, 'active': new RegExp(item.path).test(activePath)  }">
+      :class="{ 'link-item': true, 'active': new RegExp(item.path).test(activePath) }">
       {{ item.title }}
     </div>
   </div>
@@ -47,10 +47,24 @@ const activePath = computed(() => {
   border-right: transparent 5px solid;
 
   &.active {
-    font-weight: bold;
+    // font-weight: bold;
     color: white;
     text-shadow: 0 0 2px white;
     // border-right: vars.$color-vue-light 5px solid;
+    position: relative;
+
+    &::after {
+      content: ' ';
+      position: absolute;
+      width: 1em;
+      height: 1em;
+      background-color: vars.$color-vue-light;
+      border-radius: .5em;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      right: .5em;
+    }
   }
 }
 </style>

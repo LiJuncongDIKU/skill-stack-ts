@@ -15,9 +15,22 @@
 
 <script setup lang="ts">
 import { computed, ref, watch, type Ref } from 'vue';
-import { marked } from 'marked';
+import { Marked } from 'marked';
 import { type codeFile } from './Description';
-import HighLightCoder from '../..//components/HighLightCoder.vue';
+import HighLightCoder from '../../components/HighLightCoder.vue';
+import { markedHighlight } from "marked-highlight";
+import hljs from 'highlight.js';
+
+const marked = new Marked(
+  markedHighlight({
+    emptyLangClass: 'hljs',
+    langPrefix: 'hljs language-',
+    highlight(code, lang, info) {
+      const language = hljs.getLanguage(lang) ? lang : 'plaintext';
+      return hljs.highlight(code, { language }).value;
+    }
+  })
+);
 
 const props = defineProps<{
   fileList: codeFile[]
@@ -83,6 +96,7 @@ const markedMd = computed(() => {
   .limit-scroll {
     flex: 1 1 auto;
     overflow: auto;
+    width: 100%;
   }
 }
 
@@ -109,6 +123,9 @@ const markedMd = computed(() => {
     background: #666;
     padding: .3em .5em;
     border-radius: .3em;
+    &.hljs{
+      background: #000;
+    }
   }
 
   blockquote {

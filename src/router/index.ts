@@ -12,8 +12,8 @@ const routes = [
       {
         path: '/workbench/crud', component: () => import('../views/crud/Crud.vue'),
         children: [
-          { path: '/workbench/crud/table', name: 'curdTable', component: () => import('../views/crud/CrudTable.vue') },
-          { path: '/workbench/crud/form', name: 'curdForm', component: () => import('../views/crud/CrudForm.vue') }
+          { path: '/workbench/crud/table', name: 'crudTable', component: () => import('../views/crud/CrudTable.vue') },
+          { path: '/workbench/crud/form', name: 'crudForm', component: () => import('../views/crud/CrudForm.vue') }
         ],
       }
     ]

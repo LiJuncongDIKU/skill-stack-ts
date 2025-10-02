@@ -23,6 +23,9 @@ importers:
       marked:
         specifier: ^16.3.0
         version: 16.3.0
+      marked-highlight:
+        specifier: ^2.2.2
+        version: 2.2.2(marked@16.3.0)
       vue:
         specifier: ^3.5.18
         version: 3.5.20(typescript@5.8.3)
@@ -906,6 +909,11 @@ packages:
   make-dir@3.1.0:
     resolution: {integrity: sha512-g3FeP20LNwhALb/6Cz6Dd4F2ngze0jz7tbzrD2wAV+o9FeNHe4rL+yK2md0J/fiSf1sa1ADhXqi5+oVwOM/eGw==}
     engines: {node: '>=8'}
+
+  marked-highlight@2.2.2:
+    resolution: {integrity: sha512-KlHOP31DatbtPPXPaI8nx1KTrG3EW0Z5zewCwpUj65swbtKOTStteK3sNAjBqV75Pgo3fNEVNHeptg18mDuWgw==}
+    peerDependencies:
+      marked: '>=4 <17'
 
   marked@16.3.0:
     resolution: {integrity: sha512-K3UxuKu6l6bmA5FUwYho8CfJBlsUWAooKtdGgMcERSpF7gcBUrCGsLH7wDaaNOzwq18JzSUDyoEb/YsrqMac3w==}
@@ -2095,6 +2103,10 @@ snapshots:
   make-dir@3.1.0:
     dependencies:
       semver: 6.3.1
+
+  marked-highlight@2.2.2(marked@16.3.0):
+    dependencies:
+      marked: 16.3.0
 
   marked@16.3.0: {}
 
