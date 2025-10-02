@@ -1,5 +1,5 @@
 <template>
-  <highlight autodetect :code="props.code" />
+  <highlight autodetect :code="props.code || ''" />
 </template>
 
 <script setup lang="ts">

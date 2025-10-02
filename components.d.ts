@@ -17,8 +17,6 @@ declare module 'vue' {
     ElInput: typeof import('element-plus/es')['ElInput']
     ElOption: typeof import('element-plus/es')['ElOption']
     ElSelect: typeof import('element-plus/es')['ElSelect']
-    ElStep: typeof import('element-plus/es')['ElStep']
-    ElSteps: typeof import('element-plus/es')['ElSteps']
     EmptyBox: typeof import('./src/components/common/EmptyBox.vue')['default']
     HelloWorld: typeof import('./src/components/HelloWorld.vue')['default']
     HighLightCoder: typeof import('./src/components/HighLightCoder.vue')['default']
