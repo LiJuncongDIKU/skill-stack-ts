@@ -19,7 +19,6 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 22.x  # 匹配项目的 Node 版本
-          cache: 'npm'        # 缓存 npm 依赖，加速安装
 
       # 步骤 3：安装依赖并构建项目
       - name: Install dependencies and build
