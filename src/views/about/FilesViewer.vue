@@ -123,7 +123,8 @@ const markedMd = computed(() => {
     background: #666;
     padding: .3em .5em;
     border-radius: .3em;
-    &.hljs{
+
+    &.hljs {
       background: #000;
     }
   }
@@ -138,6 +139,21 @@ const markedMd = computed(() => {
 
   em {
     color: #ccc;
+  }
+
+  a {
+    color: vars.$color-vue-light;
+
+    &:visited,
+    &:active,
+    &:focus {
+      color: vars.$color-vue-light;
+
+    }
+  }
+
+  hr{
+    margin: 1em 0;
   }
 }
 </style>

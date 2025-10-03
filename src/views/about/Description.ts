@@ -16,7 +16,7 @@ import clientClassTxt from "../../views/client/Client.ts?raw";
 import pnpmTxt from '@/code4show/framework/pnpm.md?raw';
 import npmTxt from '@/code4show/framework/npm.md?raw';
 import yarnTxt from '@/code4show/framework/yarn.md?raw';
-import huskyTxt from '@/code4show/framework/pre-commit?raw';
+import elseToolTxt from '@/code4show/framework/elseTools.md?raw';
 
 export type codeFile = {
   name: string;
@@ -108,20 +108,15 @@ export const descriptionsList: desc[] = [
   },
   {
     title: '一些规范工具',
-    desc: '',
+    desc: '不同团队对规范有不同的需求，这里简单概括一下',
     icon: toolsIcon,
     tags: [
       {
-        name: 'Husky',
+        name: '格式化和规范工具',
         code: [
-          { name: "介绍", lang: 'md', content: '# Husky \n  `Husky` 允许通过简单的命令生成处理 `git` 钩子的方法，这将使得团队格式化和 `tsc` 验证非常规范' },
-          { name: ".husky/_/pre-commit", content: huskyTxt }
+          { name: "介绍", lang: 'md', content: elseToolTxt },
         ],
       },
-      {
-        name: 'TypeScript',
-        code: [],
-      }
     ],
   }
 ]
