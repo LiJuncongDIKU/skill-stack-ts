@@ -15,15 +15,18 @@ import { formDesc } from './descriptions/formDesc'
 .flex-wrap{
   display: flex;
   align-items: flex-start;
+  overflow: hidden;
   .form{
     box-sizing: border-box;
     flex: 0 0 500px;
     margin: 0 1em 0 0;
+    max-height: 100%;
+    overflow: auto;
   }
   .viewer{
     flex: 1 1 auto;
     align-items: flex-start;
-    max-height: 100vh;
+    max-height: 100%;
   }
 }
 </style>

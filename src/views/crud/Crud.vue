@@ -30,6 +30,7 @@ const list = [
   box-sizing: border-box;
   display: grid;
   grid-template-rows: auto 1fr;
+  overflow: hidden;
 }
 
 .crud-btn {

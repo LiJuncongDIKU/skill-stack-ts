@@ -2,14 +2,19 @@
 import { reactive } from 'vue';
 
 export function useReactiveForm(initData: Record<string, any>) {
-  const temp = { ...initData };
-  const formState = reactive(initData);
   // 更新和重置时，应该以硬编码初始化的对象为模板
-  const keys = Object.keys(initData); 
+  const temp = structuredClone(initData);
+  const formState = reactive(initData);
+  const keys = Object.keys(initData);
   // 重置表单逻辑
   function resetForm() {
     keys.forEach(key => {
-      formState[key] = temp[key];
+      if (typeof temp[key] === 'object') {
+        // 防止对象引用污染 temp
+        formState[key] = structuredClone(temp[key]);
+      } else {
+        formState[key] = temp[key];
+      }
     });
   }
   function setForm(data: Record<string, any>) {

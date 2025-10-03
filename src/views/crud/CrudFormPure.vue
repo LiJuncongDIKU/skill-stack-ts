@@ -36,13 +36,18 @@
       </el-form-item>
     </el-form>
     <div class="json">
-      {{ form }}
+      实际只需要管理一个对象：{{ form }}
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
 import { useReactiveForm } from '../../hooks/useForm';
+
+type book = {
+  id: string | number,
+  name: string
+}
 
 const tags = ['游戏爱好者', '动漫爱好者', '摄影爱好者', '旅游爱好者', '美食爱好者'];
 const { formState: form, resetForm, setForm } = useReactiveForm({
@@ -68,7 +73,8 @@ const setRandom = () => {
 
 const addBook = () => {
   const len = form.books.length + 1;
-  form.books.push({ id: len, name: `未命名数据${len}` })
+  const maxId = Math.max(0, ...form.books.map((b: book) => Number(b.id) || 0))
+  form.books.push({ id: maxId + 1, name: `未命名数据${len}` })
 }
 const removeBook = (i: number) => {
   form.books.splice(i, 1)
@@ -77,8 +83,9 @@ const removeBook = (i: number) => {
 
 <style scoped lang="scss">
 .crud-form {
-  padding: 12px;
+  padding: 24px 24px 24px 12px;
   background-color: white;
+  border-radius: 6px;
 }
 
 .full-input {
