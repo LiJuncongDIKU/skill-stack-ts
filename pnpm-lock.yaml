@@ -26,6 +26,9 @@ importers:
       marked-highlight:
         specifier: ^2.2.2
         version: 2.2.2(marked@16.3.0)
+      mockjs:
+        specifier: ^1.1.0
+        version: 1.1.0
       vue:
         specifier: ^3.5.18
         version: 3.5.20(typescript@5.8.3)
@@ -63,6 +66,9 @@ importers:
       vite:
         specifier: ^7.1.2
         version: 7.1.4(@types/node@24.6.2)(sass-embedded@1.91.0)(sass@1.91.0)
+      vite-plugin-mock-server:
+        specifier: ^1.3.1
+        version: 1.3.1
       vue-tsc:
         specifier: ^3.0.5
         version: 3.0.6(typescript@5.8.3)
@@ -268,6 +274,9 @@ packages:
     peerDependencies:
       highlight.js: ^11.0.1
       vue: ^3
+
+  '@howiefh/ant-path-matcher@0.0.2':
+    resolution: {integrity: sha512-gIVZbBi7KX43XaI4GUDITYgR6YFdRiGBu4HazVkjVTZ/tlNH6qSpydTxaZ1cd2eIzvSblXM63SqCxVo30yA9ww==}
 
   '@jridgewell/gen-mapping@0.3.13':
     resolution: {integrity: sha512-2kkt/7niJ6MgEPxF0bYdQ6etZaA+fQvDcLKckhy1yIQOzaoKjBBjSj63/aLVjYE3qhRt5dvM+uUyfCg6UKCBbA==}
@@ -954,6 +963,10 @@ packages:
   mlly@1.8.0:
     resolution: {integrity: sha512-l8D9ODSRWLe2KHJSifWGwBqpTZXIXTeo8mlKjY+E2HAakaTeNpqAyBZ8GSqLzHgw4XmHmC8whvpjJNMbFZN7/g==}
 
+  mockjs@1.1.0:
+    resolution: {integrity: sha512-eQsKcWzIaZzEZ07NuEyO4Nw65g0hdWAyurVol1IPl1gahRwY+svqzfgfey8U8dahLwG44d6/RwEzuK52rSa/JQ==}
+    hasBin: true
+
   ms@2.1.3:
     resolution: {integrity: sha512-6FlzubTLZG3J2a/NVCAleEhjzq5oxgHyaCU9yYXvcLsvoVaHJq/s5xXI6/XXP6tz7R9xAOtHnSO/tXtF3WRTlA==}
 
@@ -1280,6 +1293,9 @@ packages:
   varint@6.0.0:
     resolution: {integrity: sha512-cXEIW6cfr15lFv563k4GuVuW/fiwjknytD37jIOLSdSWuOI6WnO/oKwmP2FQTU2l01LP8/M5TSAJpzUaGe3uWg==}
 
+  vite-plugin-mock-server@1.3.1:
+    resolution: {integrity: sha512-sj6LVSM9CROZVLU3+nMUHFZ9+e/DgeVYt7O9SfR+Slla1zgB5PhXz7234aN0mjNjZFlXcGBbIl9otIPW7375Kw==}
+
   vite@7.1.4:
     resolution: {integrity: sha512-X5QFK4SGynAeeIt+A7ZWnApdUyHYm+pzv/8/A57LqSGcI88U6R6ipOs3uCesdc6yl7nl+zNO0t8LmqAdXcQihw==}
     engines: {node: ^20.19.0 || >=22.12.0}
@@ -1472,6 +1488,8 @@ snapshots:
     dependencies:
       highlight.js: 11.11.1
       vue: 3.5.20(typescript@5.8.3)
+
+  '@howiefh/ant-path-matcher@0.0.2': {}
 
   '@jridgewell/gen-mapping@0.3.13':
     dependencies:
@@ -2144,6 +2162,10 @@ snapshots:
       pkg-types: 1.3.1
       ufo: 1.6.1
 
+  mockjs@1.1.0:
+    dependencies:
+      commander: 13.1.0
+
   ms@2.1.3: {}
 
   muggle-string@0.4.1: {}
@@ -2461,6 +2483,11 @@ snapshots:
       webpack-virtual-modules: 0.6.2
 
   varint@6.0.0: {}
+
+  vite-plugin-mock-server@1.3.1:
+    dependencies:
+      '@howiefh/ant-path-matcher': 0.0.2
+      chokidar: 3.6.0
 
   vite@7.1.4(@types/node@24.6.2)(sass-embedded@1.91.0)(sass@1.91.0):
     dependencies:

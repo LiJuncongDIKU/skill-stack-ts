@@ -12,5 +12,5 @@
     "noUncheckedSideEffectImports": true
   },
   "include": ["src/**/*.ts", "src/**/*.tsx", "src/**/*.vue"],
-  "exclude": ["src/code4show/**"]
+  "exclude": ["src/code4show/**", "mock/**"]
 }

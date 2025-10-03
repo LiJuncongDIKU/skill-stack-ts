@@ -22,6 +22,20 @@ export function useReactiveForm(initData: Record<string, any>) {
       formState[key] = data[key];
     });
   }
+  // 这里可以封一个满足一般CRUD业务的查询参数方案：返回有效值数据，不返回空数组
+  function getCleanForm4Query() {
+    const res: Record<string, any> = {};
+    keys.forEach(k => {
+      const val = formState[k];
+      const isEmptyArray = Array.isArray(val) && val.length === 0;
+      if (isEmptyArray || val === undefined || val === null) {
+        return;
+      }
+      res[k] = val;
+    })
+    return res;
+
+  }
   // 封装初始化、重置的逻辑
-  return { formState, resetForm, setForm };
+  return { formState, resetForm, setForm, getCleanForm4Query };
 }

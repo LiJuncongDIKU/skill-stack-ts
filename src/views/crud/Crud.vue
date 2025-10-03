@@ -12,8 +12,8 @@
 
 <script setup lang="ts">
 const list = [
-  { label: '表单编辑', path: "/workbench/crud/form" },
-  { label: '表格查询', path: "/workbench/crud/table" },
+  { label: '引说hook', path: "/workbench/crud/form" },
+  { label: 'mock例子', path: "/workbench/crud/table" },
 ];
 </script>
 

@@ -1,7 +1,7 @@
 <template>
   <div class="bench-wrap">
     <div class="chapter">
-      <div class="title">我的章节</div>
+      <div class="title" @click="goHome">白猫出更</div>
       <Menu></Menu>
     </div>
     <router-view class="content"></router-view>
@@ -9,8 +9,11 @@
 </template>
 
 <script setup lang="ts">
+import { router } from '../../router';
 import Menu from './Menu.vue'
-
+const goHome = () => {
+  router.push('/')
+}
 </script>
 
 <style lang="scss" scoped>
@@ -39,6 +42,7 @@ import Menu from './Menu.vue'
       border-bottom: #000 1px solid;
       letter-spacing: 2px;
       background: vars.$color-vue-light;
+      cursor: pointer;
     }
   }
 
