@@ -1,4 +1,5 @@
 import axios, { type AxiosInstance, type AxiosRequestConfig } from 'axios';
+import { ElMessageBox } from 'element-plus';
 
 declare module 'axios' {
   interface AxiosInstance {
@@ -12,16 +13,22 @@ function defineApi(this: AxiosInstance, uri: string, options: AxiosRequestConfig
       ...options, // 定义api时候的配置
       ...config, // 调用时候的配置, 优先级最高
     };
-    if ( exOption.method.toLocaleLowerCase() === 'post') {
+    if (exOption.method.toLocaleLowerCase() === 'post') {
       exOption.data = data;
-    }else{
+    } else {
       exOption.params = data;
     }
-    console.log('exOption',exOption)
+    console.log('exOption', exOption)
     return this.request({ // 定义实例时已带有默认配置
       url: uri,
       ...exOption,
-    });
+    }).catch((e) => {
+      ElMessageBox({
+        title: e.code || '提示',
+        message: '展示一下统一异常处理的弹窗:' + e.message
+      })
+      throw '禁止后续的then执行'
+    })
   }
 }
 

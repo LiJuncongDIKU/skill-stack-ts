@@ -13,20 +13,22 @@ type OrderStatus = typeof ORDER_STATUS[number]['value'];
 
 // 定义构造函数参数类型
 export interface OrderParams {
-  id: number;
+  id?: string;
   userName: string;
   orderDate: Date | string;  // 支持Date对象或ISO格式字符串
   orderStatus: OrderStatus;
+  desc?: string,
 }
 
 export class Order {
-  public readonly id: number;
+  public readonly id?: string;
   public userName: string;
   public orderDate: Date;
   public orderStatus: OrderStatus;
   public static statusMatcher = new Matcher(ORDER_STATUS);
   public orderStatusText: string;
   public orderDateText: string;
+  public desc?: string;
   constructor(params: OrderParams) {
     this.id = params.id;
     this.userName = params.userName;
@@ -37,11 +39,27 @@ export class Order {
     this.orderDateText = `${this.orderDate.toLocaleDateString()} ${this.orderDate.toLocaleTimeString()}`;
     this.orderStatus = params.orderStatus;
     this.orderStatusText = Order.statusMatcher.match(this.orderStatus);
+    this.desc = params.desc;
   }
-  public static addOrder(params: OrderParams): Promise<AxiosResponse> {
+  public static saveOrder(params: OrderParams): Promise<AxiosResponse> {
+    if (params.id) {
+      return orderApi.updateOrder(params).then((result: AxiosResponse) => {
+        // 这应该会执行一些model层级的封装
+        return result;
+      })
+    }
     return orderApi.addOrder(params).then((result: AxiosResponse) => {
       // 这应该会执行一些model层级的封装
       return result;
     })
+  }
+  public static getOrderById(id: string): Promise<Order> {
+    return orderApi.getOrderById({ id }).then((result: AxiosResponse) => {
+      return new Order(result.data);
+    })
+  }
+
+  public delSelf(): Promise<AxiosResponse> {
+    return orderApi.deleteOrder({ id: this.id })
   }
 }

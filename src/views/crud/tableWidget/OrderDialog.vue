@@ -1,7 +1,10 @@
 <template>
-  <el-dialog :title="title" width="500px" v-model="visible">
+  <el-dialog :title="title" width="500px" v-model="visible" @opened="afterOpen">
     <div class="form-wrap" v-loading="loading">
       <el-form class="form-01" :model="formState" ref="formRef" :rules="rules" label-width="80px">
+        <el-form-item label="订单id" prop="id" v-if="props.orderId">
+          <el-input v-model="formState.id" disabled></el-input>
+        </el-form-item>
         <el-form-item label="用户名" prop="userName">
           <el-input v-model="formState.userName"></el-input>
         </el-form-item>
@@ -44,7 +47,8 @@ const close = () => {
   visible.value = false;
 }
 
-const { formState } = useReactiveForm({
+const { formState, setForm, resetForm } = useReactiveForm({
+  id: '',
   userName: '',
   orderStatus: 0,
   desc: ''
@@ -65,11 +69,11 @@ const loading = ref<boolean>(false);
 const onSubmit = () => {
   loading.value = true;
   formRef.value.validate().then(() => {
-    Order.addOrder(formState as OrderParams).then((result: AxiosResponse) => {
+    Order.saveOrder(formState as OrderParams).then((result: AxiosResponse) => {
       // 假如需要其他逻辑
       if (result.data.message === '成功') {
         visible.value = false;
-        ElMessage({ type: 'success', message: '新增成功，事件刷新数据，但不返回第一页（也许）' })
+        ElMessage({ type: 'success', message: '保存成功，事件刷新数据，但不返回第一页（也许）' })
         emits('finish')
       }
     }).finally(() => {
@@ -77,6 +81,24 @@ const onSubmit = () => {
     })
   }).catch(() => {
     loading.value = false;
+  })
+}
+// 打开的时候要检查是新增还是编辑
+let currentOrder: Order | null = null;
+const afterOpen = () => {
+  if (!props.orderId) {
+    resetForm();
+    setTimeout(formRef.value.clearValidate, 0);
+    return;
+  }
+  // 获取编辑用的order对象
+  loading.value = true;
+  Order.getOrderById(props.orderId).then((result: Order) => {
+    currentOrder = result
+    setForm(currentOrder)
+  }).finally(() => {
+    loading.value = false;
+    setTimeout(formRef.value.clearValidate, 0);
   })
 }
 </script>
