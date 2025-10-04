@@ -5,16 +5,24 @@
         :to="rItem.path">
         {{ rItem.label }}
       </router-link>
+      <CrudMissions class="intro-wrap" v-show="inTable"></CrudMissions>
     </div>
     <router-view class="sub-view"></router-view>
   </div>
 </template>
 
 <script setup lang="ts">
+import { computed } from 'vue';
+import { router } from '../../router';
+import CrudMissions from './tableWidget/CrudMissions.vue';
+
 const list = [
   { label: '引说hook', path: "/workbench/crud/form" },
   { label: 'mock实践', path: "/workbench/crud/table" },
 ];
+const inTable = computed(() => {
+  return list[1].path === router.currentRoute.value.fullPath;
+})
 </script>
 
 <style scoped lang="scss">
@@ -52,5 +60,10 @@ const list = [
 .crud-btn-active {
   color: #000;
   background-color: vars.$color-vue-light;
+}
+
+.intro-wrap {
+  color: #fff;
+  float: right;
 }
 </style>

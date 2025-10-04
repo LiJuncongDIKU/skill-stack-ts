@@ -62,9 +62,7 @@ onMounted(() => {
 <style scoped lang="scss">
 .query-wrap {
   background-color: white;
-  border-radius: 6px;
   padding: 12px 0 0 0;
-  margin: 6px;
 }
 
 .mini-select {

@@ -22,7 +22,7 @@ const go2bench = () => {
 </script>
 
 <style scoped lang="scss">
-.tip{
+.tip {
   position: absolute;
   left: 0;
   right: 0;
@@ -32,6 +32,7 @@ const go2bench = () => {
   color: #666;
   margin: auto;
 }
+
 /* From Uiverse.io by milegelu */
 .dark-bg {
   width: 100vw;
@@ -108,13 +109,22 @@ const go2bench = () => {
   filter: blur(5px);
 }
 
-.gradient-text {
-  color: transparent;
-  background: linear-gradient(to left,
-       #F5D2D2, #F8F7BA, #BDE3C3, #A3CCDA );
+.gradient-text,
+
+.sp {
+  background: linear-gradient(90deg,
+      #866ee7,
+      #ea60da,
+      #ed8f57,
+      #fbd41d,
+      #2cca91);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   background-clip: text;
-  // filter: hue-rotate(0deg);
+  text-fill-color: transparent;
+  display: block;
 }
+
 
 .gradient-button:hover .gradient-text {
   animation: hue-rotating 2s linear infinite;

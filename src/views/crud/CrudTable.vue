@@ -35,12 +35,14 @@ import TableQuery from './tableWidget/TableQuery.vue';
 import { Order, type OrderParams } from './tableWidget/OrderClass';
 import OrderDialog from './tableWidget/OrderDialog.vue';
 import { ElMessage, ElMessageBox } from 'element-plus';
+import { CrudMissionClass } from './tableWidget/CrudMissionsClass';
 
 const { loading, queryWithParams, list, pageNo, pageSize, total, refresh } = usePageApi(orderApi.getOrderPage)
 // 查询被点击了
 const queryClick = (params: any) => {
   // 把查询参数设置到分页里面
   queryWithParams(params)
+  CrudMissionClass.setMissionFlag('useFormHook', true);
 }
 
 const orderList = computed(() => {
@@ -85,6 +87,9 @@ const delBtn = (row: Order) => {
   height: 100%;
   display: grid;
   grid-template-rows: auto 1fr auto;
+  gap: 8px;
+  padding: 8px;
+  box-sizing: border-box;
 
   .table-inner {
     height: 100%;
