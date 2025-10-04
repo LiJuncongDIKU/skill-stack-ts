@@ -2,7 +2,7 @@
   <div class="table-wrap" v-loading="loading">
     <TableQuery @query="queryClick">
       <el-button type="primary" @click="addBtn">新增订单</el-button>
-      <OrderDialog v-model:visible="dialogVisible"></OrderDialog>
+      <OrderDialog v-model:visible="dialogVisible" @finish="refresh"></OrderDialog>
     </TableQuery>
     <!-- <div > -->
     <el-table ref="tableRef" :data="orderList" class="table-inner" :max-height="maxTableHeight">
@@ -26,7 +26,7 @@ import TableQuery from './tableWidget/TableQuery.vue';
 import { Order, type OrderParams } from './tableWidget/OrderClass';
 import OrderDialog from './tableWidget/OrderDialog.vue';
 
-const { loading, queryWithParams, list, pageNo, pageSize, total } = usePageApi(orderApi.getOrderPage)
+const { loading, queryWithParams, list, pageNo, pageSize, total, refresh } = usePageApi(orderApi.getOrderPage)
 // 查询被点击了
 const queryClick = (params: any) => {
   // 把查询参数设置到分页里面

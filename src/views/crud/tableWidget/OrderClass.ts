@@ -1,3 +1,5 @@
+import type { AxiosResponse } from "axios";
+import orderApi from "../../../apis/order.api";
 import { Matcher, type trans } from "./Matcher";
 
 export const ORDER_STATUS: trans[] = [
@@ -35,5 +37,11 @@ export class Order {
     this.orderDateText = `${this.orderDate.toLocaleDateString()} ${this.orderDate.toLocaleTimeString()}`;
     this.orderStatus = params.orderStatus;
     this.orderStatusText = Order.statusMatcher.match(this.orderStatus);
+  }
+  public static addOrder(params: OrderParams): Promise<AxiosResponse> {
+    return orderApi.addOrder(params).then((result: AxiosResponse) => {
+      // 这应该会执行一些model层级的封装
+      return result;
+    })
   }
 }

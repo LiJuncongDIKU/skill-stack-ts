@@ -55,5 +55,5 @@ export function usePageApi(api: Function) {
   })
 
 
-  return { pageNo, pageSize, list, loading,total, queryWithParams };
+  return { pageNo, pageSize, list, loading,total, queryWithParams, refresh:executeApi };
 }

@@ -7,7 +7,7 @@ const mockRules: MockHandler[] = [
     pattern: '/api/auth/order/page',
     handle: (req, res) => {
       const { pageNo, pageSize } = req.body;
-      const mockOption:any = {
+      const mockOption: any = {
         pageNo,
         pageSize,
         'total|50-1000': 100
@@ -22,6 +22,15 @@ const mockRules: MockHandler[] = [
       res.setHeader('Content-Type', 'application/json')
       setTimeout(() => {
         res.end(JSON.stringify(mockData))
+      }, 1000);
+    }
+  },
+  {
+    pattern: '/api/auth/order/add',
+    handle: (req, res) => {
+      res.setHeader('Content-Type', 'application/json')
+      setTimeout(() => {
+        res.end(JSON.stringify({ message: "成功" }))
       }, 1000);
     }
   },
