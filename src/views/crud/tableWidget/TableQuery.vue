@@ -18,14 +18,16 @@
         </el-date-picker>
       </el-form-item>
       <el-form-item>
-        <el-button type="primary" @click="onSubmit">查询</el-button>
+        <el-button type="primary" @click="onSubmit" plain>Mock查询</el-button>
         <el-button @click="resetForm">重置条件</el-button>
+        <slot></slot>
       </el-form-item>
     </el-form>
   </div>
 </template>
 
 <script setup lang="ts">
+import { onMounted } from 'vue';
 import { useReactiveForm } from '../../../hooks/useForm';
 import { ORDER_STATUS } from './OrderClass';
 
@@ -52,6 +54,9 @@ const onSubmit = () => {
   console.log(params);
   emits('query', params);
 }
+onMounted(() => {
+  onSubmit();
+})
 </script>
 
 <style scoped lang="scss">

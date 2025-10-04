@@ -1,0 +1,13 @@
+.form-01 {
+  width: 100%;
+
+  :deep(.el-form-item) {
+    width: 100%;
+    // margin: 0 0 12px 0;
+    box-sizing: border-box;
+    padding: 8px;
+    .el-form-item__label {
+      // background-color: #f2f2f2;
+    }
+  }
+}

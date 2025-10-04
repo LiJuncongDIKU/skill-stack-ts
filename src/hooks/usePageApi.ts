@@ -1,25 +1,23 @@
-import { reactive, ref } from "vue"
+import { reactive, ref, watch } from "vue"
 
 export function usePageApi(api: Function) {
   // 传入一个封装好的api, 这个不同业务通常有标准的返回格式
   const pageNo = ref(1);
   const pageSize = ref(10);
-  let list = reactive([]); // 分页接口的返回一定是一个数组
+  const total = ref(0);
+  const list = reactive<any>([]); // 分页接口的返回一定是一个数组
   const loading = ref(false);
-  const queryWithParams = (params: Record<string, any>) => {
-    // 查询的时候默认查询第一页
-    pageNo.value = 1;
-    const data = {
-      ...params,
-      pageNo: pageNo.value,
-      pageSize: pageSize.value
-    };
+  let paramsTemp:any = {}; // 点击查询时设置查询条件，分页切换时不改动
+
+  const executeApi = () => {
     loading.value = true;
     // 这里当然还可以定制插如 AxiosRequestOption相关的功能
-    return api(data).then((result: any) => {
+    return api(paramsTemp).then((result: any) => {
       console.log(result)
       // 格式化地处理数组
-      list = result.list || [];
+      list.splice(0, Infinity, ...(result?.data.list || []));
+      total.value = result.data.total;
+      console.log('list', list)
       return result;
     }).catch(() => {
       // 也可以在这处理失败，但是通常由api二封时就统一处理
@@ -27,5 +25,35 @@ export function usePageApi(api: Function) {
       loading.value = false;
     })
   }
-  return { pageNo, pageSize, list, loading, queryWithParams };
+
+  const queryWithParams = (params: Record<string, any>) => {
+    const data = {
+      ...params,
+      pageNo: 1, // 查询的时候默认查询第一页
+      pageSize: pageSize.value
+    };
+    paramsTemp = data;
+    if (pageNo.value === 1) {
+      executeApi();
+    } else {
+      pageNo.value = 1;
+    }
+  }
+
+  // pageNo和pageSize发生切换时，应该重新查询
+  watch([pageNo], () => {
+    paramsTemp.pageNo = pageNo.value;
+    executeApi();
+  })
+  watch([pageSize], () => {
+    paramsTemp.pageSize = pageSize.value;
+    if (pageNo.value === 1) {
+      executeApi();
+    } else {
+      pageNo.value = 1;
+    }
+  })
+
+
+  return { pageNo, pageSize, list, loading,total, queryWithParams };
 }

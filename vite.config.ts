@@ -4,6 +4,7 @@ import AutoImport from 'unplugin-auto-import/vite'
 import Components from 'unplugin-vue-components/vite'
 import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
 import mockServer from 'vite-plugin-mock-server'
+import bodyParser from 'body-parser'
 
 // https://vite.dev/config/
 export default defineConfig({
@@ -17,6 +18,12 @@ export default defineConfig({
     vue(),
     mockServer({
       logLevel: 'info',
+      middlewares: [
+        bodyParser.json(),
+        bodyParser.urlencoded(),
+        bodyParser.text(),
+        bodyParser.raw()
+      ]
     }),
     AutoImport({
       resolvers: [ElementPlusResolver()],

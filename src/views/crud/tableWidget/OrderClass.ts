@@ -10,7 +10,7 @@ type OrderStatus = typeof ORDER_STATUS[number]['value'];
 
 
 // 定义构造函数参数类型
-interface OrderParams {
+export interface OrderParams {
   id: number;
   userName: string;
   orderDate: Date | string;  // 支持Date对象或ISO格式字符串
@@ -24,6 +24,7 @@ export class Order {
   public orderStatus: OrderStatus;
   public static statusMatcher = new Matcher(ORDER_STATUS);
   public orderStatusText: string;
+  public orderDateText: string;
   constructor(params: OrderParams) {
     this.id = params.id;
     this.userName = params.userName;
@@ -31,6 +32,7 @@ export class Order {
     this.orderDate = typeof params.orderDate === 'string'
       ? new Date(params.orderDate)
       : params.orderDate;
+    this.orderDateText = `${this.orderDate.toLocaleDateString()} ${this.orderDate.toLocaleTimeString()}`;
     this.orderStatus = params.orderStatus;
     this.orderStatusText = Order.statusMatcher.match(this.orderStatus);
   }

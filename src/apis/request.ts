@@ -7,11 +7,20 @@ declare module 'axios' {
 }
 function defineApi(this: AxiosInstance, uri: string, options: AxiosRequestConfig = {}) {
   return (data: any, config: AxiosRequestConfig = {}) => {
-    return this.request({ // 定义实例时已带有默认配置
-      url: uri,
+    const exOption = {
+      method: 'POST', // 默认post
       ...options, // 定义api时候的配置
       ...config, // 调用时候的配置, 优先级最高
-      data
+    };
+    if ( exOption.method.toLocaleLowerCase() === 'post') {
+      exOption.data = data;
+    }else{
+      exOption.params = data;
+    }
+    console.log('exOption',exOption)
+    return this.request({ // 定义实例时已带有默认配置
+      url: uri,
+      ...exOption,
     });
   }
 }

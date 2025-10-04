@@ -13,7 +13,7 @@
 <script setup lang="ts">
 const list = [
   { label: '引说hook', path: "/workbench/crud/form" },
-  { label: 'mock例子', path: "/workbench/crud/table" },
+  { label: 'mock实践', path: "/workbench/crud/table" },
 ];
 </script>
 
