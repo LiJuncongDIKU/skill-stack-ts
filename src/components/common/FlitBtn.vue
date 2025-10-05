@@ -32,9 +32,9 @@ const handleClick = () => {
 @use '../../assets/scss/keyframe.scss' as *;
 
 .box {
-  width: 24px;
-  height: 24px;
-  padding: 8px;
+  width: 32px;
+  height: 32px;
+  padding: 4px;
   border: 1px solid vars.$color-vue-light;
   background-color: vars.$color-vue-deep;
   display: flex;

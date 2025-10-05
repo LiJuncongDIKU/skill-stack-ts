@@ -101,7 +101,7 @@ const markedMd = computed(() => {
 }
 
 :deep(.md-content) {
-  background-color: #333;
+  background-color: #282c34;
   color: white;
   padding: 12px;
 

@@ -56,14 +56,17 @@ const activePath = computed(() => {
     &::after {
       content: ' ';
       position: absolute;
-      width: 1em;
-      height: 1em;
-      background-color: vars.$color-vue-light;
-      border-radius: .5em;
       top: 0;
       bottom: 0;
       margin: auto;
-      right: .5em;
+      right: 0;
+
+      width: 0;
+      height: 0;
+      border: 1em solid transparent;
+      border-left-color: vars.$color-vue-light;
+      transform: scale(80%,50%);
+      overflow: hidden;
     }
   }
 }

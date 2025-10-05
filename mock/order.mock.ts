@@ -51,7 +51,7 @@ const mockRules: MockHandler[] = [
         'userName': '@cname()',
         'orderDate': '@datetime()',
         'orderStatus|0-3': 1,
-        'desc': '@word(15,30)'
+        'desc': '@cword(15,30)'
       })
       setTimeout(() => {
         res.end(JSON.stringify(mockData))

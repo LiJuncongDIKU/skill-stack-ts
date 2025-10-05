@@ -60,16 +60,19 @@ const dialogVisible = ref<boolean>(false);
 const addBtn = () => {
   editId.value = '';
   dialogVisible.value = true;
+  CrudMissionClass.setMissionFlag('useFormHook', true);
 }
 
 const editBtn = (row: Order) => {
   editId.value = row.id;
   dialogVisible.value = true;
+  CrudMissionClass.setMissionFlag('update-id', true);
 }
 
 const delBtn = (row: Order) => {
   ElMessageBox.confirm(`确定要删除这个订单吗？ id:${row.id}`, { title: '一般删除都是二次提醒的' })
     .then(() => {
+      loading.value = true;
       row.delSelf().then(() => {
         ElMessage({ type: 'success', message: '删除成功, 刷新数据' })
         refresh();
@@ -77,6 +80,7 @@ const delBtn = (row: Order) => {
     }).catch(() => {
 
     })
+  CrudMissionClass.setMissionFlag('delete-id', true);
 }
 </script>
 
