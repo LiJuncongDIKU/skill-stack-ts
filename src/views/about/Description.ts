@@ -10,7 +10,7 @@ import viteQuickImport from '@/code4show/vite/quickImport.js?raw';
 import indexHtml from '@/code4show/framework/index.html?raw';
 import appMain from '@/code4show/framework/main.ts?raw';
 import viteConfig from '@/code4show/framework/vite.config.ts?raw';
-import requestTxt from "../../apis/request.ts?raw"
+import requestTxt from "../../code4show/framework/request.ts?raw"
 import clientTxt from "../../apis/client.api.ts?raw"
 import clientClassTxt from "../../views/client/Client.ts?raw";
 import pnpmTxt from '@/code4show/framework/pnpm.md?raw';

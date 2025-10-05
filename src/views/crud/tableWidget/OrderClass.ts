@@ -10,7 +10,6 @@ export const ORDER_STATUS: trans[] = [
 ];
 type OrderStatus = typeof ORDER_STATUS[number]['value'];
 
-
 // 定义构造函数参数类型
 export interface OrderParams {
   id?: string;
@@ -58,7 +57,6 @@ export class Order {
       return new Order(result.data);
     })
   }
-
   public delSelf(): Promise<AxiosResponse> {
     return orderApi.deleteOrder({ id: this.id })
   }

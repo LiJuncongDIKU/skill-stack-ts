@@ -9,7 +9,7 @@ import readMd from './read.md?raw';
 import usePageApiTxt from '../../../hooks/usePageApi.ts?raw';
 import useReactiveFormTxt from '../../../hooks/useForm.ts?raw';
 import clientApiTxt from '../../../apis/client.api.ts?raw';
-import requestTxt from '../../../apis/request.ts?raw'
+import requestTxt from '../../../code4show/framework/request.ts?raw'
 import OrderTxt from './OrderClass?raw';
 import OrderDialogTxt from './OrderDialog.vue?raw';
 import updatePlusTxt from './updatePlus.md?raw';

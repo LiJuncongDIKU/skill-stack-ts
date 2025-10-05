@@ -1,26 +1,12 @@
 import axios, { type AxiosInstance, type AxiosRequestConfig } from 'axios';
 import { ElMessageBox } from 'element-plus';
-import { localMock } from './localMock'; // 兼容静态网页
 
 declare module 'axios' {
   interface AxiosInstance {
     defineApi: (uri: string, options?: AxiosRequestConfig) => Function;
   }
 }
-const isStaticIo = import.meta.env.MODE !== 'development'; // 如果是部署后的静态网站的话没有mock服务时
 function defineApi(this: AxiosInstance, uri: string, options: AxiosRequestConfig = {}) {
-  const localHandler = localMock[uri]?.handler;
-  if (isStaticIo && localHandler) {
-    return (data: any, config: AxiosRequestConfig = {}) => {
-      return new Promise((resolve) => {
-        console.log('config', config)
-        setTimeout(() => {
-          console.log('localMock[uri].handler(data)', (data))
-          resolve({ data: localMock[uri].handler(data) });
-        }, 1000);
-      })
-    }
-  }
   return (data: any, config: AxiosRequestConfig = {}) => {
     const exOption = {
       method: 'POST', // 默认post
