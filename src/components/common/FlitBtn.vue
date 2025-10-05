@@ -1,8 +1,8 @@
 <template>
   <el-tooltip :content="tips" placement="bottom-end" effect="light">
     <Transition name="bounce" class="box" mode="out-in">
-      <img v-if="isActive" :src="props.activeUrl">
-      <img v-else :src="questionUrl">
+      <img v-if="isActive" :src="props.activeUrl" @click="handleClick">
+      <img v-else :src="questionUrl" @click="handleClick">
     </Transition>
   </el-tooltip>
 </template>
@@ -16,12 +16,15 @@ const props = withDefaults(
   defineProps<{ activeUrl: string, isActive: boolean, activeLabel?: string }>()
   , { activeUrl: questionUrl, isActive: false }
 );
+const emits = defineEmits(['click'])
 
 const tips = computed(() => {
   return props.isActive ? props.activeLabel || '激活' : '等你来探索'
 })
 
-
+const handleClick = () => {
+  emits('click')
+}
 </script>
 
 <style scoped lang="scss">

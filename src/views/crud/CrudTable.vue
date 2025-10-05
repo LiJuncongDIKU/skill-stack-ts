@@ -42,7 +42,7 @@ const { loading, queryWithParams, list, pageNo, pageSize, total, refresh } = use
 const queryClick = (params: any) => {
   // 把查询参数设置到分页里面
   queryWithParams(params)
-  CrudMissionClass.setMissionFlag('useFormHook', true);
+  CrudMissionClass.setMissionFlag('usePageApiHook', true);
 }
 
 const orderList = computed(() => {
