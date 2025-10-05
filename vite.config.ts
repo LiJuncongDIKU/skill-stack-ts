@@ -14,6 +14,14 @@ export default defineConfig({
       '@': '/src',
     },
   },
+  build: {
+    rollupOptions: {
+      output:{
+        entryFileNames: 'assets/en_[name].[hash].js',
+        chunkFileNames: 'assets/ck_[name].[hash].js',
+      }
+    }
+  },
   plugins: [
     vue(),
     mockServer({
