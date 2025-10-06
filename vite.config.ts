@@ -19,8 +19,8 @@ export default defineConfig({
       output:{
         entryFileNames: 'assets/en_[name].[hash].js',
         chunkFileNames: 'assets/ck_[name].[hash].js',
-      }
-    }
+      },
+    },
   },
   plugins: [
     vue(),

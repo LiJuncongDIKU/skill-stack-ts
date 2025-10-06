@@ -17,3 +17,78 @@
     var(--g3) 0 calc(1.73 * var(--s)) #1e1e1e;
   background-size: calc(2 * var(--s)) calc(3.46 * var(--s));
 }
+
+
+/* From Uiverse.io by Spacious74 */ 
+.outer-cont {
+  padding: 12px 20px;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  position: relative;
+  background: linear-gradient(90deg, #5bfcc4, #f593e4, #71a4f0);
+  border-radius: 12px;
+  color: #fff;
+  transition: all 0.3s ease;
+  box-shadow:
+    inset 0px 0px 5px #ffffffa9,
+    inset 0px 35px 30px #00000044,
+    0px 5px 10px #000000cc;
+  text-shadow: 1px 1px 1px #00000044;
+}
+.outer-cont::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  border-radius: 12px;
+  filter: blur(0);
+  z-index: -1;
+  box-shadow: none;
+  background: conic-gradient(
+    #00000000 80deg,
+    #40baf7,
+    #f34ad7,
+    #5bfcc4,
+    #00000000 280deg
+  );
+  transition: all 0.3s ease;
+}
+.outer-cont:hover::before {
+  filter: blur(15px);
+}
+.outer-cont:active::before {
+  filter: blur(5px);
+  transform: translateY(1px);
+}
+.outer-cont:active {
+  box-shadow:
+    inset 0px 0px 5px #ffffffa9,
+    inset 0px 35px 30px #000;
+  margin-top: 3px;
+}
+
+$light-btn-color: darkorange;
+.light-btn {
+  padding: .4em 1em;
+  border: none;
+  font-size: 15px;
+  color: #fff;
+  border-radius: 7px;
+  font-weight: 700;
+  text-transform: uppercase;
+  transition: 0.5s;
+  transition-property: box-shadow;
+}
+
+.light-btn {
+  background: $light-btn-color;
+  box-shadow: 0 0 25px $light-btn-color;
+}
+
+.light-btn:hover {
+  box-shadow: 0 0 3px $light-btn-color,
+              0 0 8px $light-btn-color,
+              0 0 15px $light-btn-color,
+              0 0 20px $light-btn-color;
+}
