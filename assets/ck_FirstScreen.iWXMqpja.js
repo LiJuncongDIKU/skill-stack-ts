@@ -1,1 +1,0 @@
-import{_ as n,b as o,g as e,o as r}from"./en_index.CGAx2-Sc.js";const t={};function l(c,s){return r(),o("div",null,[...s[0]||(s[0]=[e("div",{class:"todo"},[e("div",null," LCP（最大内容绘制）：目标 < 2.5s "),e("div",null," FID（首次输入延迟）：目标 < 100ms "),e("div",null," CLS（累积布局偏移）：目标 < 0.1 ")],-1)])])}const d=n(t,[["render",l]]);export{d as default};
