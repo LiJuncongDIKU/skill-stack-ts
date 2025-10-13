@@ -10,7 +10,7 @@ const routes = [
       { path: '/workbench/overview', component: () => import('../views/overview/Overview.vue') },
       { path: '/workbench/about', component: () => import('../views/about/About.vue') },
       {
-        path: '/workbench/crud', component: () => import('../views/crud/Crud.vue'),
+        path: '/workbench/crud', component: () => import('../views/crud/CrudHome.vue'),
         children: [
           { path: '/workbench/crud/table', name: 'crudTable', component: () => import('../views/crud/CrudTable.vue') },
           { path: '/workbench/crud/form', name: 'crudForm', component: () => import('../views/crud/CrudForm.vue') }

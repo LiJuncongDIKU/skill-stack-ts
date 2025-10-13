@@ -1,6 +1,7 @@
-import { reactive, ref, watch } from "vue"
+import { reactive, ref, watch } from "vue";
+import type { AxiosRequestConfig } from "axios";
 
-export function usePageApi(api: Function) {
+export function usePageApi(api: (data: any, config?: AxiosRequestConfig) => Promise<any>) {
   // 传入一个封装好的api, 这个不同业务通常有标准的返回格式
   const pageNo = ref(1);
   const pageSize = ref(20);

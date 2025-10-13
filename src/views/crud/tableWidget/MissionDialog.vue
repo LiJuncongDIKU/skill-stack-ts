@@ -21,11 +21,11 @@
 
 <script setup lang="ts">
 import FilesViewer from '../../about/FilesViewer.vue';
-import type { mission } from './CrudMissionsClass';
+import type { mission as MissionClass } from './CrudMissionsClass';
 import crossUrl from '../../../assets/icon/cross.svg?url';
 import EmptyBox from '../../../components/common/EmptyBox.vue';
 
-const props = defineProps<{ mission: mission }>()
+const props = defineProps<{ mission: MissionClass }>()
 const visible = defineModel('visible')
 </script>
 

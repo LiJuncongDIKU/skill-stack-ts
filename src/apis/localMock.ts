@@ -1,6 +1,6 @@
 import Mock from 'mockjs/dist/mock.js'
 
-export const localMock: Record<string, { handler: Function }> = {
+export const localMock: Record<string, { handler: (params?: any) => any }> = {
   '/order/page': {
     handler: (params: any) => {
       const { pageNo, pageSize } = params;

@@ -4,13 +4,13 @@ import { localMock } from './localMock'; // 兼容静态网页
 
 declare module 'axios' {
   interface AxiosInstance {
-    defineApi: (uri: string, options?: AxiosRequestConfig) => Function;
+    defineApi: (uri: string, options?: AxiosRequestConfig) => ((data: any, config?: AxiosRequestConfig) => Promise<any>);
   }
 }
 const isStaticIo = import.meta.env.MODE !== 'development'; // 如果是部署后的静态网站的话没有mock服务时
 function defineApi(this: AxiosInstance, uri: string, options: AxiosRequestConfig = {}) {
   const localHandler = localMock[uri]?.handler;
-  if (isStaticIo && localHandler) {
+  if (isStaticIo && !!localHandler) {
     return (data: any, config: AxiosRequestConfig = {}) => {
       return new Promise((resolve) => {
         console.log('config', config)
