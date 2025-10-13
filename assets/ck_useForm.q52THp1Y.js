@@ -1,4 +1,4 @@
-import{a6 as n,u as t}from"./en_index.DQbeLCK-.js";const u=({from:r,replacement:a,scope:o,version:s,ref:c,type:i="API"},e)=>{n(()=>t(e),m=>{},{immediate:!0})},f=`// 使用reactive实现一个form表单的hook解释：为什么Vue快，为什么应该多写hook
+import{a6 as n,u as t}from"./en_index.BHgPCHSw.js";const u=({from:r,replacement:a,scope:o,version:s,ref:c,type:i="API"},e)=>{n(()=>t(e),m=>{},{immediate:!0})},f=`// 使用reactive实现一个form表单的hook解释：为什么Vue快，为什么应该多写hook
 import { reactive } from 'vue';
 
 export function useReactiveForm(initData: Record<string, any>) {
