@@ -19,7 +19,7 @@ const list = reactive([
   },
   {
     title: '经典CRUD风格',
-    path: '/workbench/crud'
+    path: '/workbench/crud/form'
   },
   {
     title: '简单优化',
