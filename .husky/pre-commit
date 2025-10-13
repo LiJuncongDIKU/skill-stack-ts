@@ -1,2 +1,3 @@
 pnpm tsc
 pnpm eslint
+git add --all

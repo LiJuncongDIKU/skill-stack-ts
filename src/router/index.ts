@@ -21,6 +21,9 @@ const routes = [
       },
       {
         path: '/workbench/firstScreen', component: () => import('../views/firstScreen/FirstScreen.vue')
+      },
+      {
+        path: '/workbench/CesiumJS', component: () => import('../views/cesium/CesiumHome.vue')
       }
     ]
   }

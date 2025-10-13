@@ -71,11 +71,11 @@ const descList: webNorm[] = [
 .desc-item {
   color: #eee;
   background: vars.$color-vue-deep;
-  padding: 10px;
+  padding: 16px;
   border: 2px solid vars.$color-vue-light;
 
   .title{
-    font-size: 24px;
+    font-size: 28px;
     margin-bottom: 10px;
   }
   .desc{

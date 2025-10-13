@@ -10,7 +10,7 @@
     "preview": "vite preview",
     "deploy": "gh-pages -d dist",
     "prepare": "husky",
-    "eslint": "eslint . --ext .ts,.vue"
+    "eslint": "eslint . --ext .ts,.vue --fix"
   },
   "dependencies": {
     "@highlightjs/vue-plugin": "^2.1.0",

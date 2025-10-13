@@ -26,8 +26,8 @@ const list = reactive([
     path: '/workbench/firstScreen',
   },
   {
-    title: '一些其他包',
-    path: '/workbench/scroll',
+    title: 'GIS基本概念',
+    path: '/workbench/CesiumJS',
     isDev: true,
   },
   {
