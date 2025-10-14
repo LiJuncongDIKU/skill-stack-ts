@@ -1,12 +1,30 @@
 $deep-vue: #34495e;
 $light-vue: #41b883;
 
-body,* {
+body,
+* {
   margin: 0;
   padding: 0;
 }
 
-.typical-box{
+.typical-box {
   background-color: $deep-vue;
   border: 1px solid $light-vue;
+}
+
+.btn-01 {
+  display: inline-block;
+  background: $deep-vue;
+  color: #fff;
+  border: 2px solid $light-vue;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  &+.btn-01{
+    margin-left: 12px;
+  }
+  &:hover {
+    color: #fff;
+    box-shadow: 0 0 6px 0 $light-vue inset;
+  }
 }

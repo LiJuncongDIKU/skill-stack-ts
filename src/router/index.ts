@@ -24,6 +24,9 @@ const routes = [
       },
       {
         path: '/workbench/CesiumJS', component: () => import('../views/cesium/CesiumHome.vue')
+      },
+      {
+        path: '/workbench/gisBase', component: () => import('../views/gisBase/GisBase.vue')
       }
     ]
   }

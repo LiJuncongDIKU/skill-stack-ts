@@ -27,8 +27,8 @@ const list = reactive([
   },
   {
     title: 'GIS基本概念',
-    path: '/workbench/CesiumJS',
-    isDev: true,
+    path: '/workbench/gisBase',
+    // isDev: true,
   },
   {
     title: '未完待续...',
