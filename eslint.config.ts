@@ -15,5 +15,5 @@ export default defineConfig([
       "@typescript-eslint/no-explicit-any": "off"
     },
   },
-  globalIgnores(["**/code4show/**", "**/vite-env.d.ts"])
+  globalIgnores(["**/code4show/**", "**/node_modules/**","**/dist/**", "**/vite-env.d.ts"])
 ]);

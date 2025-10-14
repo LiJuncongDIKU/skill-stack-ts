@@ -5,7 +5,7 @@ import Components from 'unplugin-vue-components/vite'
 import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
 import mockServer from 'vite-plugin-mock-server'
 import bodyParser from 'body-parser'
-import copy from 'rollup-plugin-copy';
+import cp from 'vite-plugin-cp';
 import path from 'path';
 
 // https://vite.dev/config/
@@ -20,7 +20,7 @@ export default defineConfig({
   define: {
     CESIUM_BASE_URL: JSON.stringify('/cesium') // 静态资源基础路径
   },
-  assetsInclude:['node_modules/cesium/Source/Assets/**/*'],
+  assetsInclude: ['node_modules/cesium/Source/Assets/**/*'],
   build: {
     rollupOptions: {
       output: {
@@ -29,26 +29,25 @@ export default defineConfig({
       },
       plugins: [
         // 复制 Cesium 静态资源到输出目录的 /cesium 文件夹
-        copy({
+        cp({
           targets: [
             {
-              src: 'node_modules/cesium/Source/Assets/**/*',
-              dest: 'dist/cesium/Assets'
+              src: 'node_modules/cesium/Build/Cesium/Assets/',
+              dest: 'dist/cesium/Assets',
             },
             {
-              src: 'node_modules/cesium/Source/Workers/**/*',
+              src: 'node_modules/cesium/Build/Cesium/Workers/',
               dest: 'dist/cesium/Workers'
             },
             {
-              src: 'node_modules/cesium/Source/Widgets/**/*',
+              src: 'node_modules/cesium/Build/Cesium/Widgets/',
               dest: 'dist/cesium/Widgets'
             },
             {
-              src: 'node_modules/cesium/Source/ThirdParty/**/*',
+              src: 'node_modules/cesium/Build/Cesium/ThirdParty/',
               dest: 'dist/cesium/ThirdParty'
             }
           ],
-          hook: 'buildStart' // 构建开始时复制
         })
       ]
     },
