@@ -18,7 +18,6 @@ export default defineConfig({
     },
   },
   define: {
-    CESIUM_BASE_URL: JSON.stringify('/cesium') // 静态资源基础路径
   },
   assetsInclude: ['node_modules/cesium/Source/Assets/**/*'],
   build: {
