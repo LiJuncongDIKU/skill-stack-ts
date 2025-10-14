@@ -10,7 +10,7 @@ declare global {
   }
 }
 const isOnline = import.meta.env.MODE !== 'development';
-window.CESIUM_BASE_URL = `/${import.meta.env.VITE_BASE_PATH}/${isOnline ? 'cesium' : 'node_modules/cesium/Build/Cesium'}`;
+window.CESIUM_BASE_URL = `/${import.meta.env.VITE_BASE_PATH}/${isOnline ? `${import.meta.env.VITE_BASE_PATH}/cesium` : 'node_modules/cesium/Build/Cesium'}`;
 
 export class CesiumConfig {
   private static init = false;
