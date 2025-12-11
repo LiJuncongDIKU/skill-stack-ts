@@ -1,0 +1,1 @@
+import{_ as a,a as n,b as o,o as c}from"./en_index.xCAGLME6.js";const r={};function t(s,e){return c(),n("div",null,[...e[0]||(e[0]=[o("h3",null,"古生代-奥陶纪",-1),o("p",null,"海洋生物多样性增加，出现大量无脊椎动物群落与珊瑚礁化石记录。",-1)])])}const d=a(r,[["render",t],["__scopeId","data-v-c6b63ddb"]]);export{d as default};
