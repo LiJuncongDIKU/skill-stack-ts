@@ -30,6 +30,7 @@ declare module 'vue' {
     FlitBtn: typeof import('./src/components/common/FlitBtn.vue')['default']
     HelloWorld: typeof import('./src/components/HelloWorld.vue')['default']
     HighLightCoder: typeof import('./src/components/HighLightCoder.vue')['default']
+    LogoBadge: typeof import('./src/components/common/LogoBadge.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
   }

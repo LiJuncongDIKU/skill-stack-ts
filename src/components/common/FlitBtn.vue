@@ -8,7 +8,7 @@
 </template>
 
 <script setup lang="ts">
-import { computed, withDefaults } from 'vue';
+import { computed } from 'vue';
 import questionUrl from '../../assets/icon/quetion.svg?url'
 
 // 这个组件开始的时候是个问号，不能点击，但是有激活状态，激活之后就是多彩的，点击可以打开弹框，弹框内容用插槽重点是带点动画吧
