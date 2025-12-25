@@ -76,8 +76,8 @@ const addBook = () => {
   const maxId = Math.max(0, ...form.books.map((b: book) => Number(b.id) || 0))
   form.books.push({ id: maxId + 1, name: `未命名数据${len}` })
 }
-const removeBook = (i: number) => {
-  form.books.splice(i, 1)
+const removeBook = (i: number | string) => {
+  form.books.splice(Number(i), 1)
 }
 </script>
 
