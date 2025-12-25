@@ -4,8 +4,8 @@
     <div class="trigger-btns">
       <TriangleDialog v-model:visible="triangleVisible"></TriangleDialog>
       <div class="btn-01" @click="handleClick('model')">金字塔模型</div>
-      <div class="btn-01" @click="handleClick('dataFormat')">基本地理形状</div>
-      <div class="btn-01" @click="handleClick('')">地理数据格式-开发中</div>
+      <div class="btn-01" @click="handleClick('dataFormat')">覆盖物与模型</div>
+      <div class="btn-01" @click="handleClick('')">事件与动画</div>
     </div>
   </div>
 </template>
