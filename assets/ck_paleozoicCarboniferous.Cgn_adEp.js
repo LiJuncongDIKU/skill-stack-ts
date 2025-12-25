@@ -1,1 +1,0 @@
-import{_ as a,a as n,b as o,o as r}from"./en_index.xCAGLME6.js";const s={};function t(c,e){return r(),n("div",null,[...e[0]||(e[0]=[o("h3",null,"古生代-石炭纪",-1),o("p",null,"大规模湿地与煤层形成，爬行动物出现，气候湿暖促进生物繁盛。",-1)])])}const _=a(s,[["render",t],["__scopeId","data-v-1b644a48"]]);export{_ as default};

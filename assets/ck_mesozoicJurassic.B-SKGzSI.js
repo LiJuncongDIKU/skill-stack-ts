@@ -1,1 +1,0 @@
-import{_ as s,a,b as o,o as n}from"./en_index.xCAGLME6.js";const r={};function t(c,e){return n(),a("div",null,[...e[0]||(e[0]=[o("h3",null,"中生代-侏罗纪",-1),o("p",null,"恐龙多样化，首次出现大型陆生生态系统与原始鸟类。",-1)])])}const _=s(r,[["render",t],["__scopeId","data-v-3ad72053"]]);export{_ as default};

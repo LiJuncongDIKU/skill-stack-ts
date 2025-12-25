@@ -1,1 +1,0 @@
-import{_ as n,a as t,b as o,o as a}from"./en_index.xCAGLME6.js";const c={};function r(s,e){return a(),t("div",null,[...e[0]||(e[0]=[o("h3",null,"新生代-新近纪",-1),o("p",null,"草原发展，许多现代哺乳动物群体出现并扩散。",-1)])])}const _=n(c,[["render",r],["__scopeId","data-v-82142744"]]);export{_ as default};

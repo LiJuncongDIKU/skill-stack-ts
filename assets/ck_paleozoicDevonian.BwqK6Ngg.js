@@ -1,1 +1,0 @@
-import{_ as a,a as n,b as o,o as t}from"./en_index.xCAGLME6.js";const c={};function r(s,e){return t(),n("div",null,[...e[0]||(e[0]=[o("h3",null,"古生代-泥盆纪",-1),o("p",null,"鱼类辐射并首次出现四足动物与陆生植物，生态系统向陆地扩展。",-1)])])}const _=a(c,[["render",r],["__scopeId","data-v-b530ec7a"]]);export{_ as default};
