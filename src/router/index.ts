@@ -27,6 +27,16 @@ const routes = [
       },
       {
         path: '/workbench/gisBase', component: () => import('../views/gisBase/GisBase.vue')
+      },
+      {
+        path: '/workbench/viewKnowledge', component: () => import('../views/viewKnowledge/ViewKnowledge.vue'),
+        redirect: '/workbench/viewKnowledge/intro',
+        children: [
+          { path: 'intro', name: 'viewKnowledgeIntro', component: () => import('../views/viewKnowledge/IntroView.vue') },
+          { path: 'svg', name: 'viewKnowledgeSvg', component: () => import('../views/viewKnowledge/SvgView.vue') },
+          { path: 'canvas', name: 'viewKnowledgeCanvas', component: () => import('../views/viewKnowledge/CanvasView.vue') },
+          { path: 'webgl', name: 'viewKnowledgeWebgl', component: () => import('../views/viewKnowledge/WebGLView.vue') }
+        ]
       }
       ,{
         path: '/workbench/our-world', component: () => import('../views/ourWorld/OurWorld.vue'),

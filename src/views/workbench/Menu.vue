@@ -32,7 +32,11 @@ const list = reactive([
     path: '/workbench/firstScreen',
   },
   {
-    title: 'GIS基本概念',
+    title: '可视化基础-开发中...',
+    path: '/workbench/viewKnowledge'
+  },
+  {
+    title: 'GIS基本概念-开发中...',
     path: '/workbench/gisBase',
     // isDev: true,
   },
