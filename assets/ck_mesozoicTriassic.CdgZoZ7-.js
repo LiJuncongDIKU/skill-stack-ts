@@ -1,0 +1,1 @@
+import{_ as s,a,b as o,o as c}from"./en_index.B5risS0d.js";const n={};function r(t,e){return c(),a("div",null,[...e[0]||(e[0]=[o("h3",null,"中生代-三叠纪",-1),o("p",null,"二叠纪灭绝后生态恢复，恐龙和早期哺乳类开始出现。",-1)])])}const _=s(n,[["render",r],["__scopeId","data-v-2dc3f042"]]);export{_ as default};

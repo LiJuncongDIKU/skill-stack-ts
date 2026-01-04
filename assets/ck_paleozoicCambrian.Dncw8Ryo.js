@@ -1,0 +1,1 @@
+import{_ as o,a as n,b as a,o as r}from"./en_index.B5risS0d.js";const t={};function s(c,e){return r(),n("div",null,[...e[0]||(e[0]=[a("h3",null,"古生代-寒武纪",-1),a("p",null,"寒武纪时期生命大爆发与早期动物门类的出现。",-1)])])}const _=o(t,[["render",s],["__scopeId","data-v-9ede2695"]]);export{_ as default};

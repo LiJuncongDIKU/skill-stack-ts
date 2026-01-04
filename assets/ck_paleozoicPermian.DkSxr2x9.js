@@ -1,1 +1,0 @@
-import{_ as a,a as n,b as o,o as r}from"./en_index.Bdj4BUDc.js";const t={};function s(c,e){return r(),n("div",null,[...e[0]||(e[0]=[o("h3",null,"古生代-二叠纪",-1),o("p",null,"大陆汇聚与大规模灭绝事件（二叠纪-三叠纪灭绝）发生前的最后阶段。",-1)])])}const f=a(t,[["render",s],["__scopeId","data-v-64f8f2fb"]]);export{f as default};

@@ -1,0 +1,1 @@
+import{_ as o,a,b as n,o as r}from"./en_index.B5risS0d.js";const t={};function c(s,e){return r(),a("div",null,[...e[0]||(e[0]=[n("h3",null,"新生代-第四纪",-1),n("p",null,"冰期与间冰期交替，人类出现并快速发展成为主导物种之一。",-1)])])}const _=o(t,[["render",c],["__scopeId","data-v-b2ff5809"]]);export{_ as default};

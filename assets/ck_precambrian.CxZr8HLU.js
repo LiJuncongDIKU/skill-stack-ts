@@ -1,1 +1,0 @@
-import{_ as n,a as r,b as a,o}from"./en_index.Bdj4BUDc.js";const t={};function c(s,e){return o(),r("div",null,[...e[0]||(e[0]=[a("h3",null,"前寒武纪",-1),a("p",null,"涵盖地球早期（太古代与元古代）的演化、板块早期活动与早期生命迹象。",-1)])])}const _=n(t,[["render",c],["__scopeId","data-v-a9ffcba5"]]);export{_ as default};
