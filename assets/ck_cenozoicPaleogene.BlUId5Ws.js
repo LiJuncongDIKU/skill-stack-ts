@@ -1,0 +1,1 @@
+import{_ as n,a,b as o,o as t}from"./en_index.Bdj4BUDc.js";const c={};function r(s,e){return t(),a("div",null,[...e[0]||(e[0]=[o("h3",null,"新生代-古近纪",-1),o("p",null,"白垩纪灭绝后，哺乳动物和鸟类快速辐射，多样化增加。",-1)])])}const _=n(c,[["render",r],["__scopeId","data-v-9bf80f65"]]);export{_ as default};

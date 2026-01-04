@@ -1,1 +1,0 @@
-import{_ as a,a as s,b as o,o as t}from"./en_index.BB9GjpTt.js";const n={};function r(c,e){return t(),s("div",null,[...e[0]||(e[0]=[o("h3",null,"中生代-白垩纪",-1),o("p",null,"恐龙持续统治地球，白垩纪末期发生全球性大灭绝（含恐龙灭绝事件）。",-1)])])}const d=a(n,[["render",r],["__scopeId","data-v-853dad0f"]]);export{d as default};

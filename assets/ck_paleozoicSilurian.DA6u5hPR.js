@@ -1,0 +1,1 @@
+import{_ as a,a as n,b as o,o as r}from"./en_index.Bdj4BUDc.js";const t={};function l(s,e){return r(),n("div",null,[...e[0]||(e[0]=[o("h3",null,"古生代-志留纪",-1),o("p",null,"海陆植物与鱼类多样化，珊瑚礁和海洋生态系统继续发展。",-1)])])}const _=a(t,[["render",l],["__scopeId","data-v-12791768"]]);export{_ as default};
