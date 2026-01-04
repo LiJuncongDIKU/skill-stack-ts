@@ -1,0 +1,274 @@
+<svg width="100%" height="100%" viewBox="0 0 1000 600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- 定义多种颜色的径向渐变 -->
+    <radialGradient id="bubbleGradient1" cx="30%" cy="30%">
+      <stop offset="0%" stop-color="#ff9aa2" />
+      <stop offset="100%" stop-color="#ff6b6b" />
+    </radialGradient>
+    
+    <radialGradient id="bubbleGradient2" cx="30%" cy="30%">
+      <stop offset="0%" stop-color="#ffd3b6" />
+      <stop offset="100%" stop-color="#ffaaa5" />
+    </radialGradient>
+    
+    <radialGradient id="bubbleGradient3" cx="30%" cy="30%">
+      <stop offset="0%" stop-color="#a8e6cf" />
+      <stop offset="100%" stop-color="#6bcf7f" />
+    </radialGradient>
+    
+    <radialGradient id="bubbleGradient4" cx="30%" cy="30%">
+      <stop offset="0%" stop-color="#b5ead7" />
+      <stop offset="100%" stop-color="#84fab0" />
+    </radialGradient>
+    
+    <radialGradient id="bubbleGradient5" cx="30%" cy="30%">
+      <stop offset="0%" stop-color="#c7ceea" />
+      <stop offset="100%" stop-color="#a6d0ff" />
+    </radialGradient>
+    
+    <radialGradient id="bubbleGradient6" cx="30%" cy="30%">
+      <stop offset="0%" stop-color="#ffd93d" />
+      <stop offset="100%" stop-color="#ffab3d" />
+    </radialGradient>
+    
+    <radialGradient id="bubbleGradient7" cx="30%" cy="30%">
+      <stop offset="0%" stop-color="#e2f4cb" />
+      <stop offset="100%" stop-color="#9ed5c5" />
+    </radialGradient>
+  </defs>
+  
+  <!-- 背景 -->
+  <rect width="100%" height="100%" fill="#f8f9fa" />
+  
+  <!-- 生成大量五颜六色的小气泡 -->
+  <!-- 第一组气泡 -->
+  <g class="bubbles">
+    <circle cx="100" cy="150" r="15" fill="url(#bubbleGradient1)">
+      <animate attributeName="cy" values="150;50;150" dur="8s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.6 1; 0.4 0 0.6 1" keyTimes="0; 0.5; 1" />
+      <animate attributeName="cx" values="100;110;100" dur="10s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.6 1; 0.4 0 0.6 1" keyTimes="0; 0.5; 1" />
+      <animate attributeName="r" values="15;17;15" dur="6s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.6 1; 0.4 0 0.6 1" keyTimes="0; 0.5; 1" />
+    </circle>
+    
+    <circle cx="200" cy="200" r="12" fill="url(#bubbleGradient2)">
+      <animate attributeName="cy" values="200;100;200" dur="9s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.6 1; 0.4 0 0.6 1" keyTimes="0; 0.5; 1" />
+      <animate attributeName="cx" values="200;215;200" dur="11s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.6 1; 0.4 0 0.6 1" keyTimes="0; 0.5; 1" />
+      <animate attributeName="r" values="12;14;12" dur="7s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.6 1; 0.4 0 0.6 1" keyTimes="0; 0.5; 1" />
+    </circle>
+    
+    <circle cx="300" cy="180" r="10" fill="url(#bubbleGradient3)">
+      <animate attributeName="cy" values="180;80;180" dur="7s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.6 1; 0.4 0 0.6 1" keyTimes="0; 0.5; 1" />
+      <animate attributeName="cx" values="300;320;300" dur="12s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.6 1; 0.4 0 0.6 1" keyTimes="0; 0.5; 1" />
+      <animate attributeName="r" values="10;12;10" dur="5s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.6 1; 0.4 0 0.6 1" keyTimes="0; 0.5; 1" />
+    </circle>
+    
+    <circle cx="400" cy="220" r="14" fill="url(#bubbleGradient4)">
+      <animate attributeName="cy" values="220;120;220" dur="10s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.6 1; 0.4 0 0.6 1" keyTimes="0; 0.5; 1" />
+      <animate attributeName="cx" values="400;410;400" dur="9s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.6 1; 0.4 0 0.6 1" keyTimes="0; 0.5; 1" />
+      <animate attributeName="r" values="14;16;14" dur="8s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.6 1; 0.4 0 0.6 1" keyTimes="0; 0.5; 1" />
+    </circle>
+    
+    <circle cx="500" cy="160" r="11" fill="url(#bubbleGradient5)">
+      <animate attributeName="cy" values="160;60;160" dur="8.5s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.6 1; 0.4 0 0.6 1" keyTimes="0; 0.5; 1" />
+      <animate attributeName="cx" values="500;520;500" dur="13s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.6 1; 0.4 0 0.6 1" keyTimes="0; 0.5; 1" />
+      <animate attributeName="r" values="11;13;11" dur="6.5s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.6 1; 0.4 0 0.6 1" keyTimes="0; 0.5; 1" />
+    </circle>
+    
+    <circle cx="600" cy="190" r="13" fill="url(#bubbleGradient6)">
+      <animate attributeName="cy" values="190;90;190" dur="9.5s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.6 1; 0.4 0 0.6 1" keyTimes="0; 0.5; 1" />
+      <animate attributeName="cx" values="600;615;600" dur="10.5s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.6 1; 0.4 0 0.6 1" keyTimes="0; 0.5; 1" />
+      <animate attributeName="r" values="13;15;13" dur="7.5s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.6 1; 0.4 0 0.6 1" keyTimes="0; 0.5; 1" />
+    </circle>
+    
+    <circle cx="700" cy="210" r="9" fill="url(#bubbleGradient7)">
+      <animate attributeName="cy" values="210;110;210" dur="7.5s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.6 1; 0.4 0 0.6 1" keyTimes="0; 0.5; 1" />
+      <animate attributeName="cx" values="700;725;700" dur="11.5s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.6 1; 0.4 0 0.6 1" keyTimes="0; 0.5; 1" />
+      <animate attributeName="r" values="9;11;9" dur="5.5s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.6 1; 0.4 0 0.6 1" keyTimes="0; 0.5; 1" />
+    </circle>
+    
+    <circle cx="800" cy="170" r="16" fill="url(#bubbleGradient1)">
+      <animate attributeName="cy" values="170;70;170" dur="8.8s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.6 1; 0.4 0 0.6 1" keyTimes="0; 0.5; 1" />
+      <animate attributeName="cx" values="800;810;800" dur="9.8s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.6 1; 0.4 0 0.6 1" keyTimes="0; 0.5; 1" />
+      <animate attributeName="r" values="16;18;16" dur="8.2s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.6 1; 0.4 0 0.6 1" keyTimes="0; 0.5; 1" />
+    </circle>
+    
+    <circle cx="900" cy="200" r="12" fill="url(#bubbleGradient2)">
+      <animate attributeName="cy" values="200;100;200" dur="9.2s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.6 1; 0.4 0 0.6 1" keyTimes="0; 0.5; 1" />
+      <animate attributeName="cx" values="900;920;900" dur="12.2s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.6 1; 0.4 0 0.6 1" keyTimes="0; 0.5; 1" />
+      <animate attributeName="r" values="12;14;12" dur="6.8s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.6 1; 0.4 0 0.6 1" keyTimes="0; 0.5; 1" />
+    </circle>
+    
+    <circle cx="150" cy="300" r="11" fill="url(#bubbleGradient3)">
+      <animate attributeName="cy" values="300;200;300" dur="10.2s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.6 1; 0.4 0 0.6 1" keyTimes="0; 0.5; 1" />
+      <animate attributeName="cx" values="150;165;150" dur="11.2s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.6 1; 0.4 0 0.6 1" keyTimes="0; 0.5; 1" />
+      <animate attributeName="r" values="11;13;11" dur="7.2s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.6 1; 0.4 0 0.6 1" keyTimes="0; 0.5; 1" />
+    </circle>
+    
+    <circle cx="250" cy="350" r="14" fill="url(#bubbleGradient4)">
+      <animate attributeName="cy" values="350;250;350" dur="8.2s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.6 1; 0.4 0 0.6 1" keyTimes="0; 0.5; 1" />
+      <animate attributeName="cx" values="250;260;250" dur="9.2s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.6 1; 0.4 0 0.6 1" keyTimes="0; 0.5; 1" />
+      <animate attributeName="r" values="14;16;14" dur="6.2s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.6 1; 0.4 0 0.6 1" keyTimes="0; 0.5; 1" />
+    </circle>
+    
+    <circle cx="350" cy="320" r="10" fill="url(#bubbleGradient5)">
+      <animate attributeName="cy" values="320;220;320" dur="9.8s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.6 1; 0.4 0 0.6 1" keyTimes="0; 0.5; 1" />
+      <animate attributeName="cx" values="350;370;350" dur="12.8s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.6 1; 0.4 0 0.6 1" keyTimes="0; 0.5; 1" />
+      <animate attributeName="r" values="10;12;10" dur="5.8s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.6 1; 0.4 0 0.6 1" keyTimes="0; 0.5; 1" />
+    </circle>
+    
+    <circle cx="450" cy="380" r="13" fill="url(#bubbleGradient6)">
+      <animate attributeName="cy" values="380;280;380" dur="7.8s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.6 1; 0.4 0 0.6 1" keyTimes="0; 0.5; 1" />
+      <animate attributeName="cx" values="450;460;450" dur="10.8s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.6 1; 0.4 0 0.6 1" keyTimes="0; 0.5; 1" />
+      <animate attributeName="r" values="13;15;13" dur="7.8s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.6 1; 0.4 0 0.6 1" keyTimes="0; 0.5; 1" />
+    </circle>
+    
+    <circle cx="550" cy="340" r="12" fill="url(#bubbleGradient7)">
+      <animate attributeName="cy" values="340;240;340" dur="8.6s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.6 1; 0.4 0 0.6 1" keyTimes="0; 0.5; 1" />
+      <animate attributeName="cx" values="550;565;550" dur="11.8s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.6 1; 0.4 0 0.6 1" keyTimes="0; 0.5; 1" />
+      <animate attributeName="r" values="12;14;12" dur="6.6s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.6 1; 0.4 0 0.6 1" keyTimes="0; 0.5; 1" />
+    </circle>
+    
+    <circle cx="650" cy="360" r="15" fill="url(#bubbleGradient1)">
+      <animate attributeName="cy" values="360;260;360" dur="9.6s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.6 1; 0.4 0 0.6 1" keyTimes="0; 0.5; 1" />
+      <animate attributeName="cx" values="650;660;650" dur="9.6s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.6 1; 0.4 0 0.6 1" keyTimes="0; 0.5; 1" />
+      <animate attributeName="r" values="15;17;15" dur="8.6s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.6 1; 0.4 0 0.6 1" keyTimes="0; 0.5; 1" />
+    </circle>
+    
+    <circle cx="750" cy="330" r="11" fill="url(#bubbleGradient2)">
+      <animate attributeName="cy" values="330;230;330" dur="8.4s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.6 1; 0.4 0 0.6 1" keyTimes="0; 0.5; 1" />
+      <animate attributeName="cx" values="750;770;750" dur="12.6s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.6 1; 0.4 0 0.6 1" keyTimes="0; 0.5; 1" />
+      <animate attributeName="r" values="11;13;11" dur="5.4s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.6 1; 0.4 0 0.6 1" keyTimes="0; 0.5; 1" />
+    </circle>
+    
+    <circle cx="850" cy="370" r="14" fill="url(#bubbleGradient3)">
+      <animate attributeName="cy" values="370;270;370" dur="10.4s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.6 1; 0.4 0 0.6 1" keyTimes="0; 0.5; 1" />
+      <animate attributeName="cx" values="850;860;850" dur="10.4s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.6 1; 0.4 0 0.6 1" keyTimes="0; 0.5; 1" />
+      <animate attributeName="r" values="14;16;14" dur="7.4s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.6 1; 0.4 0 0.6 1" keyTimes="0; 0.5; 1" />
+    </circle>
+    
+    <circle cx="950" cy="310" r="10" fill="url(#bubbleGradient4)">
+      <animate attributeName="cy" values="310;210;310" dur="7.4s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.6 1; 0.4 0 0.6 1" keyTimes="0; 0.5; 1" />
+      <animate attributeName="cx" values="950;965;950" dur="11.4s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.6 1; 0.4 0 0.6 1" keyTimes="0; 0.5; 1" />
+      <animate attributeName="r" values="10;12;10" dur="5.4s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.6 1; 0.4 0 0.6 1" keyTimes="0; 0.5; 1" />
+    </circle>
+    
+    <circle cx="50" cy="400" r="13" fill="url(#bubbleGradient5)">
+      <animate attributeName="cy" values="400;300;400" dur="9.4s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.6 1; 0.4 0 0.6 1" keyTimes="0; 0.5; 1" />
+      <animate attributeName="cx" values="50;65;50" dur="13.4s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.6 1; 0.4 0 0.6 1" keyTimes="0; 0.5; 1" />
+      <animate attributeName="r" values="13;15;13" dur="7.4s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.6 1; 0.4 0 0.6 1" keyTimes="0; 0.5; 1" />
+    </circle>
+    
+    <circle cx="120" cy="450" r="12" fill="url(#bubbleGradient6)">
+      <animate attributeName="cy" values="450;350;450" dur="8.4s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.6 1; 0.4 0 0.6 1" keyTimes="0; 0.5; 1" />
+      <animate attributeName="cx" values="120;135;120" dur="10.4s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.6 1; 0.4 0 0.6 1" keyTimes="0; 0.5; 1" />
+      <animate attributeName="r" values="12;14;12" dur="6.4s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.6 1; 0.4 0 0.6 1" keyTimes="0; 0.5; 1" />
+    </circle>
+    
+    <circle cx="220" cy="420" r="16" fill="url(#bubbleGradient7)">
+      <animate attributeName="cy" values="420;320;420" dur="10.6s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.6 1; 0.4 0 0.6 1" keyTimes="0; 0.5; 1" />
+      <animate attributeName="cx" values="220;240;220" dur="9.6s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.6 1; 0.4 0 0.6 1" keyTimes="0; 0.5; 1" />
+      <animate attributeName="r" values="16;18;16" dur="8.6s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.6 1; 0.4 0 0.6 1" keyTimes="0; 0.5; 1" />
+    </circle>
+    
+    <circle cx="320" cy="480" r="11" fill="url(#bubbleGradient1)">
+      <animate attributeName="cy" values="480;380;480" dur="7.6s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.6 1; 0.4 0 0.6 1" keyTimes="0; 0.5; 1" />
+      <animate attributeName="cx" values="320;330;320" dur="12.6s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.6 1; 0.4 0 0.6 1" keyTimes="0; 0.5; 1" />
+      <animate attributeName="r" values="11;13;11" dur="5.6s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.6 1; 0.4 0 0.6 1" keyTimes="0; 0.5; 1" />
+    </circle>
+    
+    <circle cx="420" cy="440" r="14" fill="url(#bubbleGradient2)">
+      <animate attributeName="cy" values="440;340;440" dur="9.6s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.6 1; 0.4 0 0.6 1" keyTimes="0; 0.5; 1" />
+      <animate attributeName="cx" values="420;435;420" dur="10.6s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.6 1; 0.4 0 0.6 1" keyTimes="0; 0.5; 1" />
+      <animate attributeName="r" values="14;16;14" dur="7.6s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.6 1; 0.4 0 0.6 1" keyTimes="0; 0.5; 1" />
+    </circle>
+    
+    <circle cx="520" cy="460" r="10" fill="url(#bubbleGradient3)">
+      <animate attributeName="cy" values="460;360;460" dur="8.6s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.6 1; 0.4 0 0.6 1" keyTimes="0; 0.5; 1" />
+      <animate attributeName="cx" values="520;540;520" dur="11.6s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.6 1; 0.4 0 0.6 1" keyTimes="0; 0.5; 1" />
+      <animate attributeName="r" values="10;12;10" dur="5.6s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.6 1; 0.4 0 0.6 1" keyTimes="0; 0.5; 1" />
+    </circle>
+    
+    <circle cx="620" cy="430" r="13" fill="url(#bubbleGradient4)">
+      <animate attributeName="cy" values="430;330;430" dur="10.8s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.6 1; 0.4 0 0.6 1" keyTimes="0; 0.5; 1" />
+      <animate attributeName="cx" values="620;630;620" dur="9.8s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.6 1; 0.4 0 0.6 1" keyTimes="0; 0.5; 1" />
+      <animate attributeName="r" values="13;15;13" dur="7.8s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.6 1; 0.4 0 0.6 1" keyTimes="0; 0.5; 1" />
+    </circle>
+    
+    <circle cx="720" cy="470" r="12" fill="url(#bubbleGradient5)">
+      <animate attributeName="cy" values="470;370;470" dur="7.8s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.6 1; 0.4 0 0.6 1" keyTimes="0; 0.5; 1" />
+      <animate attributeName="cx" values="720;740;720" dur="12.8s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.6 1; 0.4 0 0.6 1" keyTimes="0; 0.5; 1" />
+      <animate attributeName="r" values="12;14;12" dur="6.8s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.6 1; 0.4 0 0.6 1" keyTimes="0; 0.5; 1" />
+    </circle>
+    
+    <circle cx="820" cy="410" r="15" fill="url(#bubbleGradient6)">
+      <animate attributeName="cy" values="410;310;410" dur="9.8s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.6 1; 0.4 0 0.6 1" keyTimes="0; 0.5; 1" />
+      <animate attributeName="cx" values="820;830;820" dur="10.8s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.6 1; 0.4 0 0.6 1" keyTimes="0; 0.5; 1" />
+      <animate attributeName="r" values="15;17;15" dur="8.8s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.6 1; 0.4 0 0.6 1" keyTimes="0; 0.5; 1" />
+    </circle>
+    
+    <circle cx="920" cy="450" r="11" fill="url(#bubbleGradient7)">
+      <animate attributeName="cy" values="450;350;450" dur="8.8s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.6 1; 0.4 0 0.6 1" keyTimes="0; 0.5; 1" />
+      <animate attributeName="cx" values="920;940;920" dur="11.8s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.6 1; 0.4 0 0.6 1" keyTimes="0; 0.5; 1" />
+      <animate attributeName="r" values="11;13;11" dur="5.8s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.6 1; 0.4 0 0.6 1" keyTimes="0; 0.5; 1" />
+    </circle>
+    
+    <circle cx="80" cy="500" r="14" fill="url(#bubbleGradient1)">
+      <animate attributeName="cy" values="500;400;500" dur="10.8s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.6 1; 0.4 0 0.6 1" keyTimes="0; 0.5; 1" />
+      <animate attributeName="cx" values="80;100;80" dur="13.8s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.6 1; 0.4 0 0.6 1" keyTimes="0; 0.5; 1" />
+      <animate attributeName="r" values="14;16;14" dur="7.8s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.6 1; 0.4 0 0.6 1" keyTimes="0; 0.5; 1" />
+    </circle>
+    
+    <circle cx="180" cy="550" r="10" fill="url(#bubbleGradient2)">
+      <animate attributeName="cy" values="550;450;550" dur="7.8s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.6 1; 0.4 0 0.6 1" keyTimes="0; 0.5; 1" />
+      <animate attributeName="cx" values="180;195;180" dur="10.8s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.6 1; 0.4 0 0.6 1" keyTimes="0; 0.5; 1" />
+      <animate attributeName="r" values="10;12;10" dur="5.8s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.6 1; 0.4 0 0.6 1" keyTimes="0; 0.5; 1" />
+    </circle>
+    
+    <circle cx="280" cy="520" r="13" fill="url(#bubbleGradient3)">
+      <animate attributeName="cy" values="520;420;520" dur="9.2s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.6 1; 0.4 0 0.6 1" keyTimes="0; 0.5; 1" />
+      <animate attributeName="cx" values="280;295;280" dur="12.2s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.6 1; 0.4 0 0.6 1" keyTimes="0; 0.5; 1" />
+      <animate attributeName="r" values="13;15;13" dur="7.2s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.6 1; 0.4 0 0.6 1" keyTimes="0; 0.5; 1" />
+    </circle>
+    
+    <circle cx="380" cy="560" r="12" fill="url(#bubbleGradient4)">
+      <animate attributeName="cy" values="560;460;560" dur="8.2s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.6 1; 0.4 0 0.6 1" keyTimes="0; 0.5; 1" />
+      <animate attributeName="cx" values="380;400;380" dur="9.2s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.6 1; 0.4 0 0.6 1" keyTimes="0; 0.5; 1" />
+      <animate attributeName="r" values="12;14;12" dur="6.2s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.6 1; 0.4 0 0.6 1" keyTimes="0; 0.5; 1" />
+    </circle>
+    
+    <circle cx="480" cy="510" r="16" fill="url(#bubbleGradient5)">
+      <animate attributeName="cy" values="510;410;510" dur="10.2s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.6 1; 0.4 0 0.6 1" keyTimes="0; 0.5; 1" />
+      <animate attributeName="cx" values="480;495;480" dur="11.2s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.6 1; 0.4 0 0.6 1" keyTimes="0; 0.5; 1" />
+      <animate attributeName="r" values="16;18;16" dur="8.2s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.6 1; 0.4 0 0.6 1" keyTimes="0; 0.5; 1" />
+    </circle>
+    
+    <circle cx="580" cy="540" r="11" fill="url(#bubbleGradient6)">
+      <animate attributeName="cy" values="540;440;540" dur="7.2s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.6 1; 0.4 0 0.6 1" keyTimes="0; 0.5; 1" />
+      <animate attributeName="cx" values="580;600;580" dur="13.2s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.6 1; 0.4 0 0.6 1" keyTimes="0; 0.5; 1" />
+      <animate attributeName="r" values="11;13;11" dur="5.2s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.6 1; 0.4 0 0.6 1" keyTimes="0; 0.5; 1" />
+    </circle>
+    
+    <circle cx="680" cy="530" r="14" fill="url(#bubbleGradient7)">
+      <animate attributeName="cy" values="530;430;530" dur="9.4s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.6 1; 0.4 0 0.6 1" keyTimes="0; 0.5; 1" />
+      <animate attributeName="cx" values="680;695;680" dur="10.4s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.6 1; 0.4 0 0.6 1" keyTimes="0; 0.5; 1" />
+      <animate attributeName="r" values="14;16;14" dur="7.4s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.6 1; 0.4 0 0.6 1" keyTimes="0; 0.5; 1" />
+    </circle>
+    
+    <circle cx="780" cy="570" r="10" fill="url(#bubbleGradient1)">
+      <animate attributeName="cy" values="570;470;570" dur="8.4s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.6 1; 0.4 0 0.6 1" keyTimes="0; 0.5; 1" />
+      <animate attributeName="cx" values="780;800;780" dur="12.4s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.6 1; 0.4 0 0.6 1" keyTimes="0; 0.5; 1" />
+      <animate attributeName="r" values="10;12;10" dur="5.4s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.6 1; 0.4 0 0.6 1" keyTimes="0; 0.5; 1" />
+    </circle>
+    
+    <circle cx="880" cy="520" r="13" fill="url(#bubbleGradient2)">
+      <animate attributeName="cy" values="520;420;520" dur="10.4s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.6 1; 0.4 0 0.6 1" keyTimes="0; 0.5; 1" />
+      <animate attributeName="cx" values="880;900;880" dur="9.4s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.6 1; 0.4 0 0.6 1" keyTimes="0; 0.5; 1" />
+      <animate attributeName="r" values="13;15;13" dur="7.4s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.6 1; 0.4 0 0.6 1" keyTimes="0; 0.5; 1" />
+    </circle>
+    
+    <circle cx="980" cy="550" r="12" fill="url(#bubbleGradient3)">
+      <animate attributeName="cy" values="550;450;550" dur="7.4s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.6 1; 0.4 0 0.6 1" keyTimes="0; 0.5; 1" />
+      <animate attributeName="cx" values="980;995;980" dur="11.4s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.6 1; 0.4 0 0.6 1" keyTimes="0; 0.5; 1" />
+      <animate attributeName="r" values="12;14;12" dur="6.4s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.6 1; 0.4 0 0.6 1" keyTimes="0; 0.5; 1" />
+    </circle>
+  </g>
+</svg>

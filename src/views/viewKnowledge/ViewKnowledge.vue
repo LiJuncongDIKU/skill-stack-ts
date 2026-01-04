@@ -1,19 +1,23 @@
 <template>
   <div class="view-knowledge-container">
-    <!-- Tab导航栏 -->
-    <div class="tab-navigation">
-      <router-link 
-        v-for="tab in tabs" 
-        :key="tab.id"
-        :to="`/workbench/viewKnowledge/${tab.id}`"
-        :class="['tab-item', { 'active': $route.path.includes(tab.id) }]"
-      >
-        {{ tab.name }}
-      </router-link>
+    <div class="main-content">
+      <!-- Tab导航栏 -->
+      <div class="tab-navigation">
+        <router-link 
+          v-for="tab in tabs" 
+          :key="tab.id"
+          :to="`/workbench/viewKnowledge/${tab.id}`"
+          :class="['tab-item', { 'active': $route.path.includes(tab.id) }]"
+        >
+          {{ tab.name }}
+        </router-link>
+      </div>
+      
+      <!-- Tab内容区域 -->
+      <div class="content-wrapper">
+        <router-view class="tab-content" />
+      </div>
     </div>
-    
-    <!-- Tab内容区域 -->
-    <router-view class="tab-content" />
   </div>
 </template>
 
@@ -32,106 +36,83 @@ const tabs = reactive([
 <style lang="scss" scoped>
 @use "@/assets/scss/variable.scss" as vars;
 .view-knowledge-container {
-  padding: 20px;
-  box-sizing: border-box;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
   background-color: #212529;
+  overflow: hidden;
+  // padding: 12px;
+  // box-sizing: border-box;
+}
+
+.container-header {
+  padding: 20px;
+  border-bottom: 1px solid #343a40;
+  background-color: #212529;
+  z-index: 10;
   
   h1 {
     color: #ffffff;
-    margin-bottom: 20px;
+    margin: 0;
     font-size: 24px;
+    font-weight: 600;
   }
+}
+
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
 }
 
 // Tab导航样式
 .tab-navigation {
   display: flex;
-  border-bottom: 2px solid #343a40;
-  margin-bottom: 20px;
   background-color: #343a40;
+  border-bottom: 1px solid #495057;
+  overflow-x: auto;
+  flex: 0 0 auto;
+  
+  &::-webkit-scrollbar {
+    height: 4px;
+  }
+  
+  &::-webkit-scrollbar-track {
+    background-color: #343a40;
+  }
+  
+  &::-webkit-scrollbar-thumb {
+    background-color: #495057;
+    border-radius: 2px;
+  }
   
   .tab-item {
-    padding: 10px 20px;
+    padding: 12px 24px;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 15px;
     color: #adb5bd;
     background-color: transparent;
     border: none;
     border-bottom: 3px solid transparent;
-    margin-right: 10px;
+    white-space: nowrap;
     transition: all 0.3s ease;
     text-decoration: none;
     
     &:hover {
       color: #ffffff;
-      background-color: #343a40;
+      background-color: rgba(255, 255, 255, 0.05);
     }
     
     &.active {
       color: vars.$color-vue-light;
       border-bottom-color: vars.$color-vue-light;
-      background-color: #343a40;
+      background-color: rgba(173, 181, 189, 0.1);
     }
   }
 }
-
-// Tab内容样式
-.tab-content {
-  background-color: #343a40;
-  border-radius: 8px;
-  padding: 20px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-  
-  h2 {
-    color: #adb5bd;
-    margin-bottom: 15px;
-    font-size: 20px;
-  }
-  
-  h3 {
-    color: #adb5bd;
-    margin: 20px 0 15px;
-    font-size: 18px;
-  }
-  
-  h4 {
-    color: #adb5bd;
-    margin: 15px 0 10px;
-    font-size: 16px;
-  }
-  
-  p {
-    color: #868e96;
-    line-height: 1.6;
-    margin-bottom: 15px;
-  }
-  
-  ul {
-    color: #868e96;
-    line-height: 1.8;
-    margin-bottom: 15px;
-    padding-left: 20px;
-    
-    li {
-      margin-bottom: 8px;
-    }
-  }
-}
-
-// 基础介绍内容样式
-.intro-content {
-  .tech-overview {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
-    margin: 20px 0;
-    
-    .tech-item {
-      background-color: #495057;
-      padding: 15px;
-      border-radius: 8px;
-      border-left: 4px solid vars.$color-vue-light;
-    }
-  }
+.content-wrapper{
+  // flex: 1;
+  overflow: auto;
 }
 </style>
